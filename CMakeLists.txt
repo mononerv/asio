@@ -1,28 +1,19 @@
 cmake_minimum_required(VERSION 3.12)
-project(asio VERSION 1.22.0)
+project(asio VERSION 1.24.0)
 
-file(GLOB_RECURSE TARGET_SOURCE_FILES
-    "${PROJECT_SOURCE_DIR}/include/**.hpp"
+# Install directory setup
+include(GNUInstallDirs)
+set(INC_DIR ${CMAKE_INSTALL_INCLUDEDIR})
+
+file(GLOB_RECURSE HEADER_FILES
+    "${PROJECT_SOURCE_DIR}/include/asio/**.hpp"
 )
-include_directories(${PROJECT_SOURCE_DIR}/include)
-add_library(${PROJECT_NAME} INTERFACE ${TARGET_SOURCE_FILES})
-target_include_directories(${PROJECT_NAME} INTERFACE
-    "${PROJECT_SOURCE_DIR}/include"
+# Interface library
+add_library(asio INTERFACE)
+target_include_directories(asio
+    INTERFACE
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+    $<INSTALL_INTERFACE:${INC_DIR}>
 )
-target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_20)
-if (NOT MSVC)
-    target_compile_options(${PROJECT_NAME} PRIVATE
-        "-Wall"
-        "-Wextra"
-        "-Wconversion"
-        "-Wpedantic"
-        "-Werror"
-    )
-else()
-    target_compile_options(${PROJECT_NAME} PRIVATE
-        "/W4"
-        "/WX"
-    )
-endif()
-source_group(TREE "${CMAKE_CURRENT_LIST_DIR}" FILES ${TARGET_SOURCE_FILES})
+add_library(asio::asio ALIAS asio)
 
