@@ -7,6 +7,7 @@
 <link rel="home" href="../index.html" title="Asio">
 <link rel="up" href="../index.html" title="Asio">
 <link rel="prev" href="history.html" title="Revision History">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
 <table cellpadding="2" width="100%"><tr><td valign="top"><img alt="asio C++ library" width="250" height="60" src="../asio.png"></td></tr></table>
@@ -25,6 +26,12 @@
 <dl>
 <dt>~allocator_binder</dt>
 <dd><dl><dt>allocator_binder, <a class="indexterm" href="reference/allocator_binder/_allocator_binder.html">allocator_binder::~allocator_binder</a>
+</dt></dl></dd>
+<dt>~any_completion_executor</dt>
+<dd><dl><dt>any_completion_executor, <a class="indexterm" href="reference/any_completion_executor/_any_completion_executor.html">any_completion_executor::~any_completion_executor</a>
+</dt></dl></dd>
+<dt>~any_completion_handler</dt>
+<dd><dl><dt>any_completion_handler, <a class="indexterm" href="reference/any_completion_handler/_any_completion_handler.html">any_completion_handler::~any_completion_handler</a>
 </dt></dl></dd>
 <dt>~any_executor</dt>
 <dd><dl><dt>execution::any_executor, <a class="indexterm" href="reference/execution__any_executor/_any_executor.html">execution::any_executor::~any_executor</a>
@@ -150,6 +157,9 @@
 <dt>~file_base</dt>
 <dd><dl><dt>file_base, <a class="indexterm" href="reference/file_base/_file_base.html">file_base::~file_base</a>
 </dt></dl></dd>
+<dt>~immediate_executor_binder</dt>
+<dd><dl><dt>immediate_executor_binder, <a class="indexterm" href="reference/immediate_executor_binder/_immediate_executor_binder.html">immediate_executor_binder::~immediate_executor_binder</a>
+</dt></dl></dd>
 <dt>~io_context</dt>
 <dd><dl><dt>io_context, <a class="indexterm" href="reference/io_context/_io_context.html">io_context::~io_context</a>
 </dt></dl></dd>
@@ -157,9 +167,7 @@
 <dd><dl><dt>windows::overlapped_ptr, <a class="indexterm" href="reference/windows__overlapped_ptr/_overlapped_ptr.html">windows::overlapped_ptr::~overlapped_ptr</a>
 </dt></dl></dd>
 <dt>~promise</dt>
-<dd><dl><dt>experimental::promise&lt;
-          void(Ts...), Executor &gt;, <a class="indexterm" href="reference/experimental__promise_lt__void_lp_Ts_ellipsis__rp__comma__Executor__gt_/_promise.html">experimental::promise&lt;
-        void(Ts...), Executor &gt;::~promise</a>
+<dd><dl><dt>experimental::promise, <a class="indexterm" href="reference/experimental__promise/_promise.html">experimental::promise::~promise</a>
 </dt></dl></dd>
 <dt>~resolver_base</dt>
 <dd><dl><dt>ip::resolver_base, <a class="indexterm" href="reference/ip__resolver_base/_resolver_base.html">ip::resolver_base::~resolver_base</a>
@@ -177,6 +185,9 @@
 <dt>io_context::service, <a class="indexterm" href="reference/io_context__service/_service.html">io_context::service::~service</a>
 </dt>
 </dl></dd>
+<dt>~signal_set_base</dt>
+<dd><dl><dt>signal_set_base, <a class="indexterm" href="reference/signal_set_base/_signal_set_base.html">signal_set_base::~signal_set_base</a>
+</dt></dl></dd>
 <dt>~socket_base</dt>
 <dd><dl><dt>socket_base, <a class="indexterm" href="reference/socket_base/_socket_base.html">socket_base::~socket_base</a>
 </dt></dl></dd>
@@ -219,6 +230,8 @@
 <dt>acceptor</dt>
 <dd><dl>
 <dt>ip::tcp, <a class="indexterm" href="reference/ip__tcp/acceptor.html">ip::tcp::acceptor</a>
+</dt>
+<dt>local::seq_packet_protocol, <a class="indexterm" href="reference/local__seq_packet_protocol/acceptor.html">local::seq_packet_protocol::acceptor</a>
 </dt>
 <dt>local::stream_protocol, <a class="indexterm" href="reference/local__stream_protocol/acceptor.html">local::stream_protocol::acceptor</a>
 </dt>
@@ -290,8 +303,12 @@
 <dd><dl><dt>cancellation_type, <a class="indexterm" href="reference/cancellation_type.html">cancellation_type</a>
 </dt></dl></dd>
 <dt>allocate</dt>
-<dd><dl><dt>recycling_allocator, <a class="indexterm" href="reference/recycling_allocator/allocate.html">recycling_allocator::allocate</a>
-</dt></dl></dd>
+<dd><dl>
+<dt>any_completion_handler_allocator, <a class="indexterm" href="reference/any_completion_handler_allocator/allocate.html">any_completion_handler_allocator::allocate</a>
+</dt>
+<dt>recycling_allocator, <a class="indexterm" href="reference/recycling_allocator/allocate.html">recycling_allocator::allocate</a>
+</dt>
+</dl></dd>
 <dt>allocator_binder, <a class="indexterm" href="reference/allocator_binder.html">allocator_binder</a>
 </dt>
 <dd><dl><dt>allocator_binder, <a class="indexterm" href="reference/allocator_binder/allocator_binder.html">allocator_binder::allocator_binder</a>
@@ -304,6 +321,10 @@
 <dt>allocator_binder, <a class="indexterm" href="reference/allocator_binder/allocator_type.html">allocator_binder::allocator_type</a>
 </dt>
 <dt>buffer_registration, <a class="indexterm" href="reference/buffer_registration/allocator_type.html">buffer_registration::allocator_type</a>
+</dt>
+<dt>experimental::use_coro_t, <a class="indexterm" href="reference/experimental__use_coro_t/allocator_type.html">experimental::use_coro_t::allocator_type</a>
+</dt>
+<dt>experimental::use_promise_t, <a class="indexterm" href="reference/experimental__use_promise_t/allocator_type.html">experimental::use_promise_t::allocator_type</a>
 </dt>
 <dt>use_future_t, <a class="indexterm" href="reference/use_future_t/allocator_type.html">use_future_t::allocator_type</a>
 </dt>
@@ -347,6 +368,34 @@
 <dt>ip::address_v6, <a class="indexterm" href="reference/ip__address_v6/any.html">ip::address_v6::any</a>
 </dt>
 </dl></dd>
+<dt>any_completion_executor, <a class="indexterm" href="reference/any_completion_executor.html">any_completion_executor</a>
+</dt>
+<dd><dl><dt>any_completion_executor, <a class="indexterm" href="reference/any_completion_executor/any_completion_executor.html">any_completion_executor::any_completion_executor</a>
+</dt></dl></dd>
+<dt>any_completion_handler, <a class="indexterm" href="reference/any_completion_handler.html">any_completion_handler</a>
+</dt>
+<dd><dl><dt>any_completion_handler, <a class="indexterm" href="reference/any_completion_handler/any_completion_handler.html">any_completion_handler::any_completion_handler</a>
+</dt></dl></dd>
+<dt>any_completion_handler_allocator, <a class="indexterm" href="reference/any_completion_handler_allocator.html">any_completion_handler_allocator</a>
+</dt>
+<dd><dl>
+<dt>any_completion_handler_allocator, <a class="indexterm" href="reference/any_completion_handler_allocator/any_completion_handler_allocator.html">any_completion_handler_allocator::any_completion_handler_allocator</a>
+</dt>
+<dt>any_completion_handler_allocator&lt;
+          void, Signatures...&gt;, <a class="indexterm" href="reference/any_completion_handler_allocator_lt__void_comma__Signatures_ellipsis__gt_/any_completion_handler_allocator.html">any_completion_handler_allocator&lt;
+        void, Signatures...&gt;::any_completion_handler_allocator</a>
+</dt>
+</dl></dd>
+<dt>any_completion_handler_allocator::rebind, <a class="indexterm" href="reference/any_completion_handler_allocator__rebind.html">any_completion_handler_allocator::rebind</a>
+</dt>
+<dt>any_completion_handler_allocator&lt;
+        void, Signatures...&gt;, <a class="indexterm" href="reference/any_completion_handler_allocator_lt__void_comma__Signatures_ellipsis__gt_.html">any_completion_handler_allocator&lt;
+      void, Signatures...&gt;</a>
+</dt>
+<dt>any_completion_handler_allocator&lt;
+        void, Signatures...&gt;::rebind, <a class="indexterm" href="reference/any_completion_handler_allocator_lt__void_comma__Signatures_ellipsis__gt___rebind.html">any_completion_handler_allocator&lt;
+      void, Signatures...&gt;::rebind</a>
+</dt>
 <dt>any_executor</dt>
 <dd><dl><dt>execution::any_executor, <a class="indexterm" href="reference/execution__any_executor/any_executor.html">execution::any_executor::any_executor</a>
 </dt></dl></dd>
@@ -377,6 +426,8 @@
 <dt>cancellation_slot_binder, <a class="indexterm" href="reference/cancellation_slot_binder/argument_type.html">cancellation_slot_binder::argument_type</a>
 </dt>
 <dt>executor_binder, <a class="indexterm" href="reference/executor_binder/argument_type.html">executor_binder::argument_type</a>
+</dt>
+<dt>immediate_executor_binder, <a class="indexterm" href="reference/immediate_executor_binder/argument_type.html">immediate_executor_binder::argument_type</a>
 </dt>
 </dl></dd>
 <dt>asio_handler_allocate, <a class="indexterm" href="reference/asio_handler_allocate.html">asio_handler_allocate</a>
@@ -445,10 +496,20 @@
 </dt>
 <dt>associated_cancellation_slot, <a class="indexterm" href="reference/associated_cancellation_slot.html">associated_cancellation_slot</a>
 </dt>
+<dt>associated_cancellation_slot&lt;
+        reference_wrapper&lt; T &gt;, CancellationSlot &gt;, <a class="indexterm" href="reference/associated_cancellation_slot_lt__reference_wrapper_lt__T__gt__comma__CancellationSlot__gt_.html">associated_cancellation_slot&lt;
+      reference_wrapper&lt; T &gt;, CancellationSlot &gt;</a>
+</dt>
 <dt>associated_executor, <a class="indexterm" href="reference/associated_executor.html">associated_executor</a>
 </dt>
 <dt>associated_executor&lt;
         reference_wrapper&lt; T &gt;, Executor &gt;, <a class="indexterm" href="reference/associated_executor_lt__reference_wrapper_lt__T__gt__comma__Executor__gt_.html">associated_executor&lt;
+      reference_wrapper&lt; T &gt;, Executor &gt;</a>
+</dt>
+<dt>associated_immediate_executor, <a class="indexterm" href="reference/associated_immediate_executor.html">associated_immediate_executor</a>
+</dt>
+<dt>associated_immediate_executor&lt;
+        reference_wrapper&lt; T &gt;, Executor &gt;, <a class="indexterm" href="reference/associated_immediate_executor_lt__reference_wrapper_lt__T__gt__comma__Executor__gt_.html">associated_immediate_executor&lt;
       reference_wrapper&lt; T &gt;, Executor &gt;</a>
 </dt>
 <dt>associator, <a class="indexterm" href="reference/associator.html">associator</a>
@@ -624,9 +685,7 @@
 </dt>
 <dt>experimental::parallel_group, <a class="indexterm" href="reference/experimental__parallel_group/async_wait.html">experimental::parallel_group::async_wait</a>
 </dt>
-<dt>experimental::promise&lt;
-          void(Ts...), Executor &gt;, <a class="indexterm" href="reference/experimental__promise_lt__void_lp_Ts_ellipsis__rp__comma__Executor__gt_/async_wait.html">experimental::promise&lt;
-        void(Ts...), Executor &gt;::async_wait</a>
+<dt>experimental::ranged_parallel_group, <a class="indexterm" href="reference/experimental__ranged_parallel_group/async_wait.html">experimental::ranged_parallel_group::async_wait</a>
 </dt>
 <dt>posix::basic_descriptor, <a class="indexterm" href="reference/posix__basic_descriptor/async_wait.html">posix::basic_descriptor::async_wait</a>
 </dt>
@@ -680,6 +739,8 @@
 <dt>experimental::as_single_t, <a class="indexterm" href="reference/experimental__as_single_t/as_default_on.html">experimental::as_single_t::as_default_on</a>
 </dt>
 <dt>experimental::use_coro_t, <a class="indexterm" href="reference/experimental__use_coro_t/as_default_on.html">experimental::use_coro_t::as_default_on</a>
+</dt>
+<dt>experimental::use_promise_t, <a class="indexterm" href="reference/experimental__use_promise_t/as_default_on.html">experimental::use_promise_t::as_default_on</a>
 </dt>
 <dt>use_awaitable_t, <a class="indexterm" href="reference/use_awaitable_t/as_default_on.html">use_awaitable_t::as_default_on</a>
 </dt>
@@ -994,6 +1055,8 @@
 </dt>
 <dt>bind_executor, <a class="indexterm" href="reference/bind_executor.html">bind_executor</a>
 </dt>
+<dt>bind_immediate_executor, <a class="indexterm" href="reference/bind_immediate_executor.html">bind_immediate_executor</a>
+</dt>
 <dt>blocking_adaptation_t</dt>
 <dd><dl><dt>execution::blocking_adaptation_t, <a class="indexterm" href="reference/execution__blocking_adaptation_t/blocking_adaptation_t.html">execution::blocking_adaptation_t::blocking_adaptation_t</a>
 </dt></dl></dd>
@@ -1055,6 +1118,8 @@
 <dt>buffer_cast, <a class="indexterm" href="reference/buffer_cast.html">buffer_cast</a>
 </dt>
 <dt>buffer_copy, <a class="indexterm" href="reference/buffer_copy.html">buffer_copy</a>
+</dt>
+<dt>buffer_literals::operator""_buf, <a class="indexterm" href="reference/buffer_literals__operator_quot__quot__buf.html">buffer_literals::operator""_buf</a>
 </dt>
 <dt>buffer_registration, <a class="indexterm" href="reference/buffer_registration.html">buffer_registration</a>
 </dt>
@@ -1143,9 +1208,7 @@
 </dt>
 <dt>experimental::basic_concurrent_channel, <a class="indexterm" href="reference/experimental__basic_concurrent_channel/cancel.html">experimental::basic_concurrent_channel::cancel</a>
 </dt>
-<dt>experimental::promise&lt;
-          void(Ts...), Executor &gt;, <a class="indexterm" href="reference/experimental__promise_lt__void_lp_Ts_ellipsis__rp__comma__Executor__gt_/cancel.html">experimental::promise&lt;
-        void(Ts...), Executor &gt;::cancel</a>
+<dt>experimental::promise, <a class="indexterm" href="reference/experimental__promise/cancel.html">experimental::promise::cancel</a>
 </dt>
 <dt>ip::basic_resolver, <a class="indexterm" href="reference/ip__basic_resolver/cancel.html">ip::basic_resolver::cancel</a>
 </dt>
@@ -1379,14 +1442,11 @@
 </dt>
 </dl></dd>
 <dt>complete</dt>
-<dd><dl>
-<dt>experimental::promise&lt;
-          void(Ts...), Executor &gt;, <a class="indexterm" href="reference/experimental__promise_lt__void_lp_Ts_ellipsis__rp__comma__Executor__gt_/complete.html">experimental::promise&lt;
-        void(Ts...), Executor &gt;::complete</a>
-</dt>
-<dt>windows::overlapped_ptr, <a class="indexterm" href="reference/windows__overlapped_ptr/complete.html">windows::overlapped_ptr::complete</a>
-</dt>
-</dl></dd>
+<dd><dl><dt>windows::overlapped_ptr, <a class="indexterm" href="reference/windows__overlapped_ptr/complete.html">windows::overlapped_ptr::complete</a>
+</dt></dl></dd>
+<dt>completed</dt>
+<dd><dl><dt>experimental::promise, <a class="indexterm" href="reference/experimental__promise/completed.html">experimental::promise::completed</a>
+</dt></dl></dd>
 <dt>completion_handler</dt>
 <dd><dl><dt>async_completion, <a class="indexterm" href="reference/async_completion/completion_handler.html">async_completion::completion_handler</a>
 </dt></dl></dd>
@@ -1434,6 +1494,12 @@
 </dt></dl></dd>
 <dt>connect_pipe, <a class="indexterm" href="reference/connect_pipe.html">connect_pipe</a>
 </dt>
+<dt>consign, <a class="indexterm" href="reference/consign.html">consign</a>
+</dt>
+<dt>consign_t, <a class="indexterm" href="reference/consign_t.html">consign_t</a>
+</dt>
+<dd><dl><dt>consign_t, <a class="indexterm" href="reference/consign_t/consign_t.html">consign_t::consign_t</a>
+</dt></dl></dd>
 <dt>const_buffer, <a class="indexterm" href="reference/const_buffer.html">const_buffer</a>
 </dt>
 <dd><dl><dt>const_buffer, <a class="indexterm" href="reference/const_buffer/const_buffer.html">const_buffer::const_buffer</a>
@@ -1486,6 +1552,8 @@
 </dl></dd>
 <dt>context</dt>
 <dd><dl>
+<dt>any_completion_executor, <a class="indexterm" href="reference/any_completion_executor/context.html">any_completion_executor::context</a>
+</dt>
 <dt>any_io_executor, <a class="indexterm" href="reference/any_io_executor/context.html">any_io_executor::context</a>
 </dt>
 <dt>basic_system_executor, <a class="indexterm" href="reference/basic_system_executor/context.html">basic_system_executor::context</a>
@@ -1585,8 +1653,12 @@
 <dt>deadline_timer, <a class="indexterm" href="reference/deadline_timer.html">deadline_timer</a>
 </dt>
 <dt>deallocate</dt>
-<dd><dl><dt>recycling_allocator, <a class="indexterm" href="reference/recycling_allocator/deallocate.html">recycling_allocator::deallocate</a>
-</dt></dl></dd>
+<dd><dl>
+<dt>any_completion_handler_allocator, <a class="indexterm" href="reference/any_completion_handler_allocator/deallocate.html">any_completion_handler_allocator::deallocate</a>
+</dt>
+<dt>recycling_allocator, <a class="indexterm" href="reference/recycling_allocator/deallocate.html">recycling_allocator::deallocate</a>
+</dt>
+</dl></dd>
 <dt>debug</dt>
 <dd><dl>
 <dt>basic_datagram_socket, <a class="indexterm" href="reference/basic_datagram_socket/debug.html">basic_datagram_socket::debug</a>
@@ -1602,6 +1674,17 @@
 <dt>basic_stream_socket, <a class="indexterm" href="reference/basic_stream_socket/debug.html">basic_stream_socket::debug</a>
 </dt>
 <dt>socket_base, <a class="indexterm" href="reference/socket_base/debug.html">socket_base::debug</a>
+</dt>
+</dl></dd>
+<dt>decltype</dt>
+<dd><dl>
+<dt>associated_allocator, <a class="indexterm" href="reference/associated_allocator/decltype.html">associated_allocator::decltype</a>
+</dt>
+<dt>associated_cancellation_slot, <a class="indexterm" href="reference/associated_cancellation_slot/decltype.html">associated_cancellation_slot::decltype</a>
+</dt>
+<dt>associated_executor, <a class="indexterm" href="reference/associated_executor/decltype.html">associated_executor::decltype</a>
+</dt>
+<dt>associated_immediate_executor, <a class="indexterm" href="reference/associated_immediate_executor/decltype.html">associated_immediate_executor::decltype</a>
 </dt>
 </dl></dd>
 <dt>default_buffer_size</dt>
@@ -1624,6 +1707,8 @@
 <dt>experimental::as_single_t::executor_with_default, <a class="indexterm" href="reference/experimental__as_single_t__executor_with_default/default_completion_token_type.html">experimental::as_single_t::executor_with_default::default_completion_token_type</a>
 </dt>
 <dt>experimental::use_coro_t::executor_with_default, <a class="indexterm" href="reference/experimental__use_coro_t__executor_with_default/default_completion_token_type.html">experimental::use_coro_t::executor_with_default::default_completion_token_type</a>
+</dt>
+<dt>experimental::use_promise_t::executor_with_default, <a class="indexterm" href="reference/experimental__use_promise_t__executor_with_default/default_completion_token_type.html">experimental::use_promise_t::executor_with_default::default_completion_token_type</a>
 </dt>
 <dt>use_awaitable_t::executor_with_default, <a class="indexterm" href="reference/use_awaitable_t__executor_with_default/default_completion_token_type.html">use_awaitable_t::executor_with_default::default_completion_token_type</a>
 </dt>
@@ -1655,8 +1740,18 @@
 </dt>
 <dt>deferred_async_operation, <a class="indexterm" href="reference/deferred_async_operation.html">deferred_async_operation</a>
 </dt>
-<dd><dl><dt>deferred_async_operation, <a class="indexterm" href="reference/deferred_async_operation/deferred_async_operation.html">deferred_async_operation::deferred_async_operation</a>
-</dt></dl></dd>
+<dd><dl>
+<dt>deferred_async_operation, <a class="indexterm" href="reference/deferred_async_operation/deferred_async_operation.html">deferred_async_operation::deferred_async_operation</a>
+</dt>
+<dt>deferred_async_operation&lt;
+          deferred_signatures&lt; Signatures...&gt;, Initiation, InitArgs...&gt;, <a class="indexterm" href="reference/deferred_async_operation_lt__deferred_signatures_lt__Signatures_ellipsis__gt__comma__Initiation_comma__InitArgs_ellipsis__gt_/deferred_async_operation.html">deferred_async_operation&lt;
+        deferred_signatures&lt; Signatures...&gt;, Initiation, InitArgs...&gt;::deferred_async_operation</a>
+</dt>
+</dl></dd>
+<dt>deferred_async_operation&lt;
+        deferred_signatures&lt; Signatures...&gt;, Initiation, InitArgs...&gt;, <a class="indexterm" href="reference/deferred_async_operation_lt__deferred_signatures_lt__Signatures_ellipsis__gt__comma__Initiation_comma__InitArgs_ellipsis__gt_.html">deferred_async_operation&lt;
+      deferred_signatures&lt; Signatures...&gt;, Initiation, InitArgs...&gt;</a>
+</dt>
 <dt>deferred_conditional, <a class="indexterm" href="reference/deferred_conditional.html">deferred_conditional</a>
 </dt>
 <dd><dl><dt>deferred_conditional, <a class="indexterm" href="reference/deferred_conditional/deferred_conditional.html">deferred_conditional::deferred_conditional</a>
@@ -1673,7 +1768,7 @@
 </dt>
 <dd><dl><dt>deferred_sequence, <a class="indexterm" href="reference/deferred_sequence/deferred_sequence.html">deferred_sequence::deferred_sequence</a>
 </dt></dl></dd>
-<dt>deferred_sequence::initiate, <a class="indexterm" href="reference/deferred_sequence__initiate.html">deferred_sequence::initiate</a>
+<dt>deferred_signatures, <a class="indexterm" href="reference/deferred_signatures.html">deferred_signatures</a>
 </dt>
 <dt>deferred_t, <a class="indexterm" href="reference/deferred_t.html">deferred_t</a>
 </dt>
@@ -1716,6 +1811,10 @@
 <dt>detail::index_sequence_for</dt>
 <dd><dl>
 <dt>deferred_async_operation, <a class="indexterm" href="reference/deferred_async_operation/detail__index_sequence_for.html">deferred_async_operation::detail::index_sequence_for</a>
+</dt>
+<dt>deferred_async_operation&lt;
+          deferred_signatures&lt; Signatures...&gt;, Initiation, InitArgs...&gt;, <a class="indexterm" href="reference/deferred_async_operation_lt__deferred_signatures_lt__Signatures_ellipsis__gt__comma__Initiation_comma__InitArgs_ellipsis__gt_/detail__index_sequence_for.html">deferred_async_operation&lt;
+        deferred_signatures&lt; Signatures...&gt;, Initiation, InitArgs...&gt;::detail::index_sequence_for</a>
 </dt>
 <dt>deferred_values, <a class="indexterm" href="reference/deferred_values/detail__index_sequence_for.html">deferred_values::detail::index_sequence_for</a>
 </dt>
@@ -1761,6 +1860,13 @@
 <dt>strand, <a class="indexterm" href="reference/strand/dispatch.html">strand::dispatch</a>
 </dt>
 <dt>thread_pool::basic_executor_type, <a class="indexterm" href="reference/thread_pool__basic_executor_type/dispatch.html">thread_pool::basic_executor_type::dispatch</a>
+</dt>
+</dl></dd>
+<dt>dont_care</dt>
+<dd><dl>
+<dt>basic_signal_set, <a class="indexterm" href="reference/basic_signal_set/flags.html">basic_signal_set::flags</a>
+</dt>
+<dt>signal_set_base, <a class="indexterm" href="reference/signal_set_base/flags.html">signal_set_base::flags</a>
 </dt>
 </dl></dd>
 <dt>do_not_route</dt>
@@ -1905,6 +2011,8 @@
 </dt>
 <dt>local::datagram_protocol, <a class="indexterm" href="reference/local__datagram_protocol/endpoint.html">local::datagram_protocol::endpoint</a>
 </dt>
+<dt>local::seq_packet_protocol, <a class="indexterm" href="reference/local__seq_packet_protocol/endpoint.html">local::seq_packet_protocol::endpoint</a>
+</dt>
 <dt>local::stream_protocol, <a class="indexterm" href="reference/local__stream_protocol/endpoint.html">local::stream_protocol::endpoint</a>
 </dt>
 </dl></dd>
@@ -2008,6 +2116,8 @@
 </dl></dd>
 <dt>execute</dt>
 <dd><dl>
+<dt>any_completion_executor, <a class="indexterm" href="reference/any_completion_executor/execute.html">any_completion_executor::execute</a>
+</dt>
 <dt>any_io_executor, <a class="indexterm" href="reference/any_io_executor/execute.html">any_io_executor::execute</a>
 </dt>
 <dt>basic_system_executor, <a class="indexterm" href="reference/basic_system_executor/execute.html">basic_system_executor::execute</a>
@@ -2285,6 +2395,8 @@
 </dt>
 <dt>experimental::use_coro_t::executor_with_default, <a class="indexterm" href="reference/experimental__use_coro_t__executor_with_default/executor_with_default.html">experimental::use_coro_t::executor_with_default::executor_with_default</a>
 </dt>
+<dt>experimental::use_promise_t::executor_with_default, <a class="indexterm" href="reference/experimental__use_promise_t__executor_with_default/executor_with_default.html">experimental::use_promise_t::executor_with_default::executor_with_default</a>
+</dt>
 <dt>use_awaitable_t::executor_with_default, <a class="indexterm" href="reference/use_awaitable_t__executor_with_default/executor_with_default.html">use_awaitable_t::executor_with_default::executor_with_default</a>
 </dt>
 </dl></dd>
@@ -2324,6 +2436,8 @@
 </dt>
 <dt>experimental::coro_traits, <a class="indexterm" href="reference/experimental__coro_traits.html">experimental::coro_traits</a>
 </dt>
+<dt>experimental::co_composed, <a class="indexterm" href="reference/experimental__co_composed.html">experimental::co_composed</a>
+</dt>
 <dt>experimental::co_spawn, <a class="indexterm" href="reference/experimental__co_spawn.html">experimental::co_spawn</a>
 </dt>
 <dt>experimental::error::channel_category, <a class="indexterm" href="reference/experimental__error__channel_category.html">experimental::error::channel_category</a>
@@ -2333,6 +2447,8 @@
 <dt>experimental::error::get_channel_category, <a class="indexterm" href="reference/experimental__error__get_channel_category.html">experimental::error::get_channel_category</a>
 </dt>
 <dt>experimental::error::make_error_code, <a class="indexterm" href="reference/experimental__error__make_error_code.html">experimental::error::make_error_code</a>
+</dt>
+<dt>experimental::is_async_operation_range, <a class="indexterm" href="reference/experimental__is_async_operation_range.html">experimental::is_async_operation_range</a>
 </dt>
 <dt>experimental::is_promise, <a class="indexterm" href="reference/experimental__is_promise.html">experimental::is_promise</a>
 </dt>
@@ -2348,14 +2464,6 @@
 </dt>
 <dt>experimental::promise, <a class="indexterm" href="reference/experimental__promise.html">experimental::promise</a>
 </dt>
-<dt>experimental::promise&lt;
-        void(Ts...), Executor &gt;, <a class="indexterm" href="reference/experimental__promise_lt__void_lp_Ts_ellipsis__rp__comma__Executor__gt_.html">experimental::promise&lt;
-      void(Ts...), Executor &gt;</a>
-</dt>
-<dt>experimental::promise&lt;
-        void(Ts...), Executor &gt;::rebind_executor, <a class="indexterm" href="reference/experimental__promise_lt__void_lp_Ts_ellipsis__rp__comma__Executor__gt___rebind_executor.html">experimental::promise&lt;
-      void(Ts...), Executor &gt;::rebind_executor</a>
-</dt>
 <dt>experimental::promise_value_type, <a class="indexterm" href="reference/experimental__promise_value_type.html">experimental::promise_value_type</a>
 </dt>
 <dt>experimental::promise_value_type&lt;
@@ -2363,6 +2471,8 @@
       T &gt;</a>
 </dt>
 <dt>experimental::promise_value_type&lt;&gt;, <a class="indexterm" href="reference/experimental__promise_value_type_lt__gt_.html">experimental::promise_value_type&lt;&gt;</a>
+</dt>
+<dt>experimental::ranged_parallel_group, <a class="indexterm" href="reference/experimental__ranged_parallel_group.html">experimental::ranged_parallel_group</a>
 </dt>
 <dt>experimental::use_coro, <a class="indexterm" href="reference/experimental__use_coro.html">experimental::use_coro</a>
 </dt>
@@ -2373,6 +2483,8 @@
 <dt>experimental::use_promise, <a class="indexterm" href="reference/experimental__use_promise.html">experimental::use_promise</a>
 </dt>
 <dt>experimental::use_promise_t, <a class="indexterm" href="reference/experimental__use_promise_t.html">experimental::use_promise_t</a>
+</dt>
+<dt>experimental::use_promise_t::executor_with_default, <a class="indexterm" href="reference/experimental__use_promise_t__executor_with_default.html">experimental::use_promise_t::executor_with_default</a>
 </dt>
 <dt>experimental::wait_for_all, <a class="indexterm" href="reference/experimental__wait_for_all.html">experimental::wait_for_all</a>
 </dt>
@@ -2445,6 +2557,8 @@
 </dt>
 <dt>local::datagram_protocol, <a class="indexterm" href="reference/local__datagram_protocol/family.html">local::datagram_protocol::family</a>
 </dt>
+<dt>local::seq_packet_protocol, <a class="indexterm" href="reference/local__seq_packet_protocol/family.html">local::seq_packet_protocol::family</a>
+</dt>
 <dt>local::stream_protocol, <a class="indexterm" href="reference/local__stream_protocol/family.html">local::stream_protocol::family</a>
 </dt>
 </dl></dd>
@@ -2489,6 +2603,8 @@
 </dt>
 <dt>executor_binder, <a class="indexterm" href="reference/executor_binder/first_argument_type.html">executor_binder::first_argument_type</a>
 </dt>
+<dt>immediate_executor_binder, <a class="indexterm" href="reference/immediate_executor_binder/first_argument_type.html">immediate_executor_binder::first_argument_type</a>
+</dt>
 </dl></dd>
 <dt>first_exception</dt>
 <dd><dl><dt>multiple_exceptions, <a class="indexterm" href="reference/multiple_exceptions/first_exception.html">multiple_exceptions::first_exception</a>
@@ -2498,6 +2614,8 @@
 <dt>basic_file, <a class="indexterm" href="reference/basic_file/flags.html">basic_file::flags</a>
 </dt>
 <dt>basic_random_access_file, <a class="indexterm" href="reference/basic_random_access_file/flags.html">basic_random_access_file::flags</a>
+</dt>
+<dt>basic_signal_set, <a class="indexterm" href="reference/basic_signal_set/flags.html">basic_signal_set::flags</a>
 </dt>
 <dt>basic_stream_file, <a class="indexterm" href="reference/basic_stream_file/flags.html">basic_stream_file::flags</a>
 </dt>
@@ -2510,6 +2628,15 @@
 <dt>ip::resolver_base, <a class="indexterm" href="reference/ip__resolver_base/flags.html">ip::resolver_base::flags</a>
 </dt>
 <dt>ip::resolver_query_base, <a class="indexterm" href="reference/ip__resolver_query_base/flags.html">ip::resolver_query_base::flags</a>
+</dt>
+<dt>signal_set_base, <a class="indexterm" href="reference/signal_set_base/flags.html">signal_set_base::flags</a>
+</dt>
+</dl></dd>
+<dt>flags_t</dt>
+<dd><dl>
+<dt>basic_signal_set, <a class="indexterm" href="reference/basic_signal_set/flags_t.html">basic_signal_set::flags_t</a>
+</dt>
+<dt>signal_set_base, <a class="indexterm" href="reference/signal_set_base/flags_t.html">signal_set_base::flags_t</a>
 </dt>
 </dl></dd>
 <dt>flow_control</dt>
@@ -2617,18 +2744,20 @@
 <dd><dl>
 <dt>allocator_binder, <a class="indexterm" href="reference/allocator_binder/get.html">allocator_binder::get</a>
 </dt>
-<dt>associated_allocator, <a class="indexterm" href="reference/associated_allocator/get.html">associated_allocator::get</a>
-</dt>
 <dt>associated_allocator&lt;
           reference_wrapper&lt; T &gt;, Allocator &gt;, <a class="indexterm" href="reference/associated_allocator_lt__reference_wrapper_lt__T__gt__comma__Allocator__gt_/get.html">associated_allocator&lt;
         reference_wrapper&lt; T &gt;, Allocator &gt;::get</a>
 </dt>
-<dt>associated_cancellation_slot, <a class="indexterm" href="reference/associated_cancellation_slot/get.html">associated_cancellation_slot::get</a>
-</dt>
-<dt>associated_executor, <a class="indexterm" href="reference/associated_executor/get.html">associated_executor::get</a>
+<dt>associated_cancellation_slot&lt;
+          reference_wrapper&lt; T &gt;, CancellationSlot &gt;, <a class="indexterm" href="reference/associated_cancellation_slot_lt__reference_wrapper_lt__T__gt__comma__CancellationSlot__gt_/get.html">associated_cancellation_slot&lt;
+        reference_wrapper&lt; T &gt;, CancellationSlot &gt;::get</a>
 </dt>
 <dt>associated_executor&lt;
           reference_wrapper&lt; T &gt;, Executor &gt;, <a class="indexterm" href="reference/associated_executor_lt__reference_wrapper_lt__T__gt__comma__Executor__gt_/get.html">associated_executor&lt;
+        reference_wrapper&lt; T &gt;, Executor &gt;::get</a>
+</dt>
+<dt>associated_immediate_executor&lt;
+          reference_wrapper&lt; T &gt;, Executor &gt;, <a class="indexterm" href="reference/associated_immediate_executor_lt__reference_wrapper_lt__T__gt__comma__Executor__gt_/get.html">associated_immediate_executor&lt;
         reference_wrapper&lt; T &gt;, Executor &gt;::get</a>
 </dt>
 <dt>async_result, <a class="indexterm" href="reference/async_result/get.html">async_result::get</a>
@@ -2641,12 +2770,22 @@
 </dt>
 <dt>executor_binder, <a class="indexterm" href="reference/executor_binder/get.html">executor_binder::get</a>
 </dt>
+<dt>immediate_executor_binder, <a class="indexterm" href="reference/immediate_executor_binder/get.html">immediate_executor_binder::get</a>
+</dt>
 <dt>windows::overlapped_ptr, <a class="indexterm" href="reference/windows__overlapped_ptr/get.html">windows::overlapped_ptr::get</a>
 </dt>
 </dl></dd>
 <dt>get_allocator</dt>
 <dd><dl>
 <dt>allocator_binder, <a class="indexterm" href="reference/allocator_binder/get_allocator.html">allocator_binder::get_allocator</a>
+</dt>
+<dt>any_completion_handler, <a class="indexterm" href="reference/any_completion_handler/get_allocator.html">any_completion_handler::get_allocator</a>
+</dt>
+<dt>experimental::coro, <a class="indexterm" href="reference/experimental__coro/get_allocator.html">experimental::coro::get_allocator</a>
+</dt>
+<dt>experimental::use_coro_t, <a class="indexterm" href="reference/experimental__use_coro_t/get_allocator.html">experimental::use_coro_t::get_allocator</a>
+</dt>
+<dt>experimental::use_promise_t, <a class="indexterm" href="reference/experimental__use_promise_t/get_allocator.html">experimental::use_promise_t::get_allocator</a>
 </dt>
 <dt>use_future_t, <a class="indexterm" href="reference/use_future_t/get_allocator.html">use_future_t::get_allocator</a>
 </dt>
@@ -2657,8 +2796,12 @@
 </dt>
 <dt>get_associated_executor, <a class="indexterm" href="reference/get_associated_executor.html">get_associated_executor</a>
 </dt>
+<dt>get_associated_immediate_executor, <a class="indexterm" href="reference/get_associated_immediate_executor.html">get_associated_immediate_executor</a>
+</dt>
 <dt>get_cancellation_slot</dt>
 <dd><dl>
+<dt>any_completion_handler, <a class="indexterm" href="reference/any_completion_handler/get_cancellation_slot.html">any_completion_handler::get_cancellation_slot</a>
+</dt>
 <dt>basic_yield_context, <a class="indexterm" href="reference/basic_yield_context/get_cancellation_slot.html">basic_yield_context::get_cancellation_slot</a>
 </dt>
 <dt>cancellation_slot_binder, <a class="indexterm" href="reference/cancellation_slot_binder/get_cancellation_slot.html">cancellation_slot_binder::get_cancellation_slot</a>
@@ -2719,10 +2862,6 @@
 </dt>
 <dt>experimental::coro, <a class="indexterm" href="reference/experimental__coro/get_executor.html">experimental::coro::get_executor</a>
 </dt>
-<dt>experimental::promise&lt;
-          void(Ts...), Executor &gt;, <a class="indexterm" href="reference/experimental__promise_lt__void_lp_Ts_ellipsis__rp__comma__Executor__gt_/get_executor.html">experimental::promise&lt;
-        void(Ts...), Executor &gt;::get_executor</a>
-</dt>
 <dt>io_context, <a class="indexterm" href="reference/io_context/get_executor.html">io_context::get_executor</a>
 </dt>
 <dt>ip::basic_resolver, <a class="indexterm" href="reference/ip__basic_resolver/get_executor.html">ip::basic_resolver::get_executor</a>
@@ -2746,6 +2885,9 @@
 <dt>windows::basic_stream_handle, <a class="indexterm" href="reference/windows__basic_stream_handle/get_executor.html">windows::basic_stream_handle::get_executor</a>
 </dt>
 </dl></dd>
+<dt>get_immediate_executor</dt>
+<dd><dl><dt>immediate_executor_binder, <a class="indexterm" href="reference/immediate_executor_binder/get_immediate_executor.html">immediate_executor_binder::get_immediate_executor</a>
+</dt></dl></dd>
 <dt>get_implementation</dt>
 <dd><dl><dt>basic_io_object, <a class="indexterm" href="reference/basic_io_object/get_implementation.html">basic_io_object::get_implementation</a>
 </dt></dl></dd>
@@ -2873,6 +3015,13 @@
 <dt>mutable_registered_buffer, <a class="indexterm" href="reference/mutable_registered_buffer/id.html">mutable_registered_buffer::id</a>
 </dt>
 </dl></dd>
+<dt>immediate_executor_binder, <a class="indexterm" href="reference/immediate_executor_binder.html">immediate_executor_binder</a>
+</dt>
+<dd><dl><dt>immediate_executor_binder, <a class="indexterm" href="reference/immediate_executor_binder/immediate_executor_binder.html">immediate_executor_binder::immediate_executor_binder</a>
+</dt></dl></dd>
+<dt>immediate_executor_type</dt>
+<dd><dl><dt>immediate_executor_binder, <a class="indexterm" href="reference/immediate_executor_binder/immediate_executor_type.html">immediate_executor_binder::immediate_executor_type</a>
+</dt></dl></dd>
 <dt>implementation_type</dt>
 <dd><dl><dt>basic_io_object, <a class="indexterm" href="reference/basic_io_object/implementation_type.html">basic_io_object::implementation_type</a>
 </dt></dl></dd>
@@ -3527,6 +3676,8 @@
 </dt>
 <dt>local::datagram_protocol, <a class="indexterm" href="reference/local__datagram_protocol.html">local::datagram_protocol</a>
 </dt>
+<dt>local::seq_packet_protocol, <a class="indexterm" href="reference/local__seq_packet_protocol.html">local::seq_packet_protocol</a>
+</dt>
 <dt>local::stream_protocol, <a class="indexterm" href="reference/local__stream_protocol.html">local::stream_protocol</a>
 </dt>
 <dt>local_endpoint</dt>
@@ -4038,13 +4189,28 @@
 <dt>ssl::stream, <a class="indexterm" href="reference/ssl__stream/next_layer_type.html">ssl::stream::next_layer_type</a>
 </dt>
 </dl></dd>
+<dt>noexcept</dt>
+<dd><dl>
+<dt>associated_allocator, <a class="indexterm" href="reference/associated_allocator/noexcept.html">associated_allocator::noexcept</a>
+</dt>
+<dt>associated_cancellation_slot, <a class="indexterm" href="reference/associated_cancellation_slot/noexcept.html">associated_cancellation_slot::noexcept</a>
+</dt>
+<dt>associated_executor, <a class="indexterm" href="reference/associated_executor/noexcept.html">associated_executor::noexcept</a>
+</dt>
+<dt>associated_immediate_executor, <a class="indexterm" href="reference/associated_immediate_executor/noexcept.html">associated_immediate_executor::noexcept</a>
+</dt>
+</dl></dd>
 <dt>none</dt>
 <dd><dl>
+<dt>basic_signal_set, <a class="indexterm" href="reference/basic_signal_set/flags.html">basic_signal_set::flags</a>
+</dt>
 <dt>cancellation_type, <a class="indexterm" href="reference/cancellation_type.html">cancellation_type</a>
 </dt>
 <dt>serial_port_base::flow_control, <a class="indexterm" href="reference/serial_port_base__flow_control/type.html">serial_port_base::flow_control::type</a>
 </dt>
 <dt>serial_port_base::parity, <a class="indexterm" href="reference/serial_port_base__parity/type.html">serial_port_base::parity::type</a>
+</dt>
+<dt>signal_set_base, <a class="indexterm" href="reference/signal_set_base/flags.html">signal_set_base::flags</a>
 </dt>
 </dl></dd>
 <dt>non_blocking</dt>
@@ -4096,6 +4262,20 @@
 <dt>no_buffer_space</dt>
 <dd><dl><dt>error::basic_errors, <a class="indexterm" href="reference/error__basic_errors.html">error::basic_errors</a>
 </dt></dl></dd>
+<dt>no_child_stop</dt>
+<dd><dl>
+<dt>basic_signal_set, <a class="indexterm" href="reference/basic_signal_set/flags.html">basic_signal_set::flags</a>
+</dt>
+<dt>signal_set_base, <a class="indexterm" href="reference/signal_set_base/flags.html">signal_set_base::flags</a>
+</dt>
+</dl></dd>
+<dt>no_child_wait</dt>
+<dd><dl>
+<dt>basic_signal_set, <a class="indexterm" href="reference/basic_signal_set/flags.html">basic_signal_set::flags</a>
+</dt>
+<dt>signal_set_base, <a class="indexterm" href="reference/signal_set_base/flags.html">signal_set_base::flags</a>
+</dt>
+</dl></dd>
 <dt>no_compression</dt>
 <dd><dl>
 <dt>ssl::context, <a class="indexterm" href="reference/ssl__context/no_compression.html">ssl::context::no_compression</a>
@@ -4286,6 +4466,12 @@
 </dl></dd>
 <dt>operator bool</dt>
 <dd><dl>
+<dt>any_completion_executor, <a class="indexterm" href="reference/any_completion_executor/operator_bool.html">any_completion_executor::operator
+        bool</a>
+</dt>
+<dt>any_completion_handler, <a class="indexterm" href="reference/any_completion_handler/operator_bool.html">any_completion_handler::operator
+        bool</a>
+</dt>
 <dt>any_io_executor, <a class="indexterm" href="reference/any_io_executor/operator_bool.html">any_io_executor::operator
         bool</a>
 </dt>
@@ -4315,10 +4501,24 @@
 </dt>
 </dl></dd>
 <dt>operator!</dt>
-<dd><dl><dt>error_code, <a class="indexterm" href="reference/error_code/operator_not_.html">error_code::operator!</a>
-</dt></dl></dd>
+<dd><dl>
+<dt>any_completion_handler, <a class="indexterm" href="reference/any_completion_handler/operator_not_.html">any_completion_handler::operator!</a>
+</dt>
+<dt>error_code, <a class="indexterm" href="reference/error_code/operator_not_.html">error_code::operator!</a>
+</dt>
+</dl></dd>
 <dt>operator!=</dt>
 <dd><dl>
+<dt>any_completion_executor, <a class="indexterm" href="reference/any_completion_executor/operator_not__eq_.html">any_completion_executor::operator!=</a>
+</dt>
+<dt>any_completion_handler, <a class="indexterm" href="reference/any_completion_handler/operator_not__eq_.html">any_completion_handler::operator!=</a>
+</dt>
+<dt>any_completion_handler_allocator, <a class="indexterm" href="reference/any_completion_handler_allocator/operator_not__eq_.html">any_completion_handler_allocator::operator!=</a>
+</dt>
+<dt>any_completion_handler_allocator&lt;
+          void, Signatures...&gt;, <a class="indexterm" href="reference/any_completion_handler_allocator_lt__void_comma__Signatures_ellipsis__gt_/operator_not__eq_.html">any_completion_handler_allocator&lt;
+        void, Signatures...&gt;::operator!=</a>
+</dt>
 <dt>any_io_executor, <a class="indexterm" href="reference/any_io_executor/operator_not__eq_.html">any_io_executor::operator!=</a>
 </dt>
 <dt>basic_system_executor, <a class="indexterm" href="reference/basic_system_executor/operator_not__eq_.html">basic_system_executor::operator!=</a>
@@ -4410,11 +4610,17 @@
 <dd><dl>
 <dt>allocator_binder, <a class="indexterm" href="reference/allocator_binder/operator_lp__rp_.html">allocator_binder::operator()</a>
 </dt>
+<dt>any_completion_handler, <a class="indexterm" href="reference/any_completion_handler/operator_lp__rp_.html">any_completion_handler::operator()</a>
+</dt>
 <dt>cancellation_filter, <a class="indexterm" href="reference/cancellation_filter/operator_lp__rp_.html">cancellation_filter::operator()</a>
 </dt>
 <dt>cancellation_slot_binder, <a class="indexterm" href="reference/cancellation_slot_binder/operator_lp__rp_.html">cancellation_slot_binder::operator()</a>
 </dt>
 <dt>deferred_async_operation, <a class="indexterm" href="reference/deferred_async_operation/operator_lp__rp_.html">deferred_async_operation::operator()</a>
+</dt>
+<dt>deferred_async_operation&lt;
+          deferred_signatures&lt; Signatures...&gt;, Initiation, InitArgs...&gt;, <a class="indexterm" href="reference/deferred_async_operation_lt__deferred_signatures_lt__Signatures_ellipsis__gt__comma__Initiation_comma__InitArgs_ellipsis__gt_/operator_lp__rp_.html">deferred_async_operation&lt;
+        deferred_signatures&lt; Signatures...&gt;, Initiation, InitArgs...&gt;::operator()</a>
 </dt>
 <dt>deferred_conditional, <a class="indexterm" href="reference/deferred_conditional/operator_lp__rp_.html">deferred_conditional::operator()</a>
 </dt>
@@ -4423,8 +4629,6 @@
 <dt>deferred_noop, <a class="indexterm" href="reference/deferred_noop/operator_lp__rp_.html">deferred_noop::operator()</a>
 </dt>
 <dt>deferred_sequence, <a class="indexterm" href="reference/deferred_sequence/operator_lp__rp_.html">deferred_sequence::operator()</a>
-</dt>
-<dt>deferred_sequence::initiate, <a class="indexterm" href="reference/deferred_sequence__initiate/operator_lp__rp_.html">deferred_sequence::initiate::operator()</a>
 </dt>
 <dt>deferred_t, <a class="indexterm" href="reference/deferred_t/operator_lp__rp_.html">deferred_t::operator()</a>
 </dt>
@@ -4438,6 +4642,8 @@
 </dt>
 <dt>experimental::coro, <a class="indexterm" href="reference/experimental__coro/operator_lp__rp_.html">experimental::coro::operator()</a>
 </dt>
+<dt>experimental::promise, <a class="indexterm" href="reference/experimental__promise/operator_lp__rp_.html">experimental::promise::operator()</a>
+</dt>
 <dt>experimental::wait_for_all, <a class="indexterm" href="reference/experimental__wait_for_all/operator_lp__rp_.html">experimental::wait_for_all::operator()</a>
 </dt>
 <dt>experimental::wait_for_one, <a class="indexterm" href="reference/experimental__wait_for_one/operator_lp__rp_.html">experimental::wait_for_one::operator()</a>
@@ -4445,6 +4651,8 @@
 <dt>experimental::wait_for_one_error, <a class="indexterm" href="reference/experimental__wait_for_one_error/operator_lp__rp_.html">experimental::wait_for_one_error::operator()</a>
 </dt>
 <dt>experimental::wait_for_one_success, <a class="indexterm" href="reference/experimental__wait_for_one_success/operator_lp__rp_.html">experimental::wait_for_one_success::operator()</a>
+</dt>
+<dt>immediate_executor_binder, <a class="indexterm" href="reference/immediate_executor_binder/operator_lp__rp_.html">immediate_executor_binder::operator()</a>
 </dt>
 <dt>ssl::host_name_verification, <a class="indexterm" href="reference/ssl__host_name_verification/operator_lp__rp_.html">ssl::host_name_verification::operator()</a>
 </dt>
@@ -4590,6 +4798,10 @@
 </dl></dd>
 <dt>operator=</dt>
 <dd><dl>
+<dt>any_completion_executor, <a class="indexterm" href="reference/any_completion_executor/operator_eq_.html">any_completion_executor::operator=</a>
+</dt>
+<dt>any_completion_handler, <a class="indexterm" href="reference/any_completion_handler/operator_eq_.html">any_completion_handler::operator=</a>
+</dt>
 <dt>any_io_executor, <a class="indexterm" href="reference/any_io_executor/operator_eq_.html">any_io_executor::operator=</a>
 </dt>
 <dt>awaitable, <a class="indexterm" href="reference/awaitable/operator_eq_.html">awaitable::operator=</a>
@@ -4705,6 +4917,16 @@
 </dl></dd>
 <dt>operator==</dt>
 <dd><dl>
+<dt>any_completion_executor, <a class="indexterm" href="reference/any_completion_executor/operator_eq__eq_.html">any_completion_executor::operator==</a>
+</dt>
+<dt>any_completion_handler, <a class="indexterm" href="reference/any_completion_handler/operator_eq__eq_.html">any_completion_handler::operator==</a>
+</dt>
+<dt>any_completion_handler_allocator, <a class="indexterm" href="reference/any_completion_handler_allocator/operator_eq__eq_.html">any_completion_handler_allocator::operator==</a>
+</dt>
+<dt>any_completion_handler_allocator&lt;
+          void, Signatures...&gt;, <a class="indexterm" href="reference/any_completion_handler_allocator_lt__void_comma__Signatures_ellipsis__gt_/operator_eq__eq_.html">any_completion_handler_allocator&lt;
+        void, Signatures...&gt;::operator==</a>
+</dt>
 <dt>any_io_executor, <a class="indexterm" href="reference/any_io_executor/operator_eq__eq_.html">any_io_executor::operator==</a>
 </dt>
 <dt>basic_system_executor, <a class="indexterm" href="reference/basic_system_executor/operator_eq__eq_.html">basic_system_executor::operator==</a>
@@ -4848,6 +5070,12 @@
 </dl></dd>
 <dt>other</dt>
 <dd><dl>
+<dt>any_completion_handler_allocator::rebind, <a class="indexterm" href="reference/any_completion_handler_allocator__rebind/other.html">any_completion_handler_allocator::rebind::other</a>
+</dt>
+<dt>any_completion_handler_allocator&lt;
+          void, Signatures...&gt;::rebind, <a class="indexterm" href="reference/any_completion_handler_allocator_lt__void_comma__Signatures_ellipsis__gt___rebind/other.html">any_completion_handler_allocator&lt;
+        void, Signatures...&gt;::rebind::other</a>
+</dt>
 <dt>basic_datagram_socket::rebind_executor, <a class="indexterm" href="reference/basic_datagram_socket__rebind_executor/other.html">basic_datagram_socket::rebind_executor::other</a>
 </dt>
 <dt>basic_deadline_timer::rebind_executor, <a class="indexterm" href="reference/basic_deadline_timer__rebind_executor/other.html">basic_deadline_timer::rebind_executor::other</a>
@@ -4885,10 +5113,6 @@
 <dt>experimental::basic_concurrent_channel::rebind_executor, <a class="indexterm" href="reference/experimental__basic_concurrent_channel__rebind_executor/other.html">experimental::basic_concurrent_channel::rebind_executor::other</a>
 </dt>
 <dt>experimental::channel_traits::rebind, <a class="indexterm" href="reference/experimental__channel_traits__rebind/other.html">experimental::channel_traits::rebind::other</a>
-</dt>
-<dt>experimental::promise&lt;
-          void(Ts...), Executor &gt;::rebind_executor, <a class="indexterm" href="reference/experimental__promise_lt__void_lp_Ts_ellipsis__rp__comma__Executor__gt___rebind_executor/other.html">experimental::promise&lt;
-        void(Ts...), Executor &gt;::rebind_executor::other</a>
 </dt>
 <dt>ip::basic_resolver::rebind_executor, <a class="indexterm" href="reference/ip__basic_resolver__rebind_executor/other.html">ip::basic_resolver::rebind_executor::other</a>
 </dt>
@@ -5139,6 +5363,8 @@
 <dt>prefer, <a class="indexterm" href="reference/prefer.html">prefer</a>
 </dt>
 <dd><dl>
+<dt>any_completion_executor, <a class="indexterm" href="reference/any_completion_executor/prefer.html">any_completion_executor::prefer</a>
+</dt>
 <dt>any_io_executor, <a class="indexterm" href="reference/any_io_executor/prefer.html">any_io_executor::prefer</a>
 </dt>
 <dt>execution::any_executor, <a class="indexterm" href="reference/execution__any_executor/prefer.html">execution::any_executor::prefer</a>
@@ -5173,9 +5399,7 @@
 <dd><dl><dt>prepend_t, <a class="indexterm" href="reference/prepend_t/prepend_t.html">prepend_t::prepend_t</a>
 </dt></dl></dd>
 <dt>promise</dt>
-<dd><dl><dt>experimental::promise&lt;
-          void(Ts...), Executor &gt;, <a class="indexterm" href="reference/experimental__promise_lt__void_lp_Ts_ellipsis__rp__comma__Executor__gt_/promise.html">experimental::promise&lt;
-        void(Ts...), Executor &gt;::promise</a>
+<dd><dl><dt>experimental::promise, <a class="indexterm" href="reference/experimental__promise/promise.html">experimental::promise::promise</a>
 </dt></dl></dd>
 <dt>protocol</dt>
 <dd><dl>
@@ -5200,6 +5424,8 @@
 <dt>local::basic_endpoint, <a class="indexterm" href="reference/local__basic_endpoint/protocol.html">local::basic_endpoint::protocol</a>
 </dt>
 <dt>local::datagram_protocol, <a class="indexterm" href="reference/local__datagram_protocol/protocol.html">local::datagram_protocol::protocol</a>
+</dt>
+<dt>local::seq_packet_protocol, <a class="indexterm" href="reference/local__seq_packet_protocol/protocol.html">local::seq_packet_protocol::protocol</a>
 </dt>
 <dt>local::stream_protocol, <a class="indexterm" href="reference/local__stream_protocol/protocol.html">local::stream_protocol::protocol</a>
 </dt>
@@ -5248,6 +5474,8 @@
 <dt>query, <a class="indexterm" href="reference/query.html">query</a>
 </dt>
 <dd><dl>
+<dt>any_completion_executor, <a class="indexterm" href="reference/any_completion_executor/query.html">any_completion_executor::query</a>
+</dt>
 <dt>any_io_executor, <a class="indexterm" href="reference/any_io_executor/query.html">any_io_executor::query</a>
 </dt>
 <dt>basic_system_executor, <a class="indexterm" href="reference/basic_system_executor/query.html">basic_system_executor::query</a>, <a class="indexterm" href="reference/basic_system_executor/query__static.html">basic_system_executor::query</a>
@@ -5272,6 +5500,9 @@
 <dl>
 <dt>random_access_file, <a class="indexterm" href="reference/random_access_file.html">random_access_file</a>
 </dt>
+<dt>ranged_parallel_group</dt>
+<dd><dl><dt>experimental::ranged_parallel_group, <a class="indexterm" href="reference/experimental__ranged_parallel_group/ranged_parallel_group.html">experimental::ranged_parallel_group::ranged_parallel_group</a>
+</dt></dl></dd>
 <dt>raw_protocol</dt>
 <dd><dl><dt>generic::raw_protocol, <a class="indexterm" href="reference/generic__raw_protocol/raw_protocol.html">generic::raw_protocol::raw_protocol</a>
 </dt></dl></dd>
@@ -5346,8 +5577,14 @@
 </dt>
 </dl></dd>
 <dt>rebind</dt>
-<dd><dl><dt>use_future_t, <a class="indexterm" href="reference/use_future_t/rebind.html">use_future_t::rebind</a>
-</dt></dl></dd>
+<dd><dl>
+<dt>experimental::use_coro_t, <a class="indexterm" href="reference/experimental__use_coro_t/rebind.html">experimental::use_coro_t::rebind</a>
+</dt>
+<dt>experimental::use_promise_t, <a class="indexterm" href="reference/experimental__use_promise_t/rebind.html">experimental::use_promise_t::rebind</a>
+</dt>
+<dt>use_future_t, <a class="indexterm" href="reference/use_future_t/rebind.html">use_future_t::rebind</a>
+</dt>
+</dl></dd>
 <dt>receive</dt>
 <dd><dl>
 <dt>basic_datagram_socket, <a class="indexterm" href="reference/basic_datagram_socket/receive.html">basic_datagram_socket::receive</a>
@@ -5517,6 +5754,8 @@
 <dt>require, <a class="indexterm" href="reference/require.html">require</a>
 </dt>
 <dd><dl>
+<dt>any_completion_executor, <a class="indexterm" href="reference/any_completion_executor/require.html">any_completion_executor::require</a>
+</dt>
 <dt>any_io_executor, <a class="indexterm" href="reference/any_io_executor/require.html">any_io_executor::require</a>
 </dt>
 <dt>basic_system_executor, <a class="indexterm" href="reference/basic_system_executor/require.html">basic_system_executor::require</a>
@@ -5585,8 +5824,14 @@
 <dt>resolver_errc::try_again, <a class="indexterm" href="reference/resolver_errc__try_again.html">resolver_errc::try_again</a>
 </dt>
 <dt>restart</dt>
-<dd><dl><dt>io_context, <a class="indexterm" href="reference/io_context/restart.html">io_context::restart</a>
-</dt></dl></dd>
+<dd><dl>
+<dt>basic_signal_set, <a class="indexterm" href="reference/basic_signal_set/flags.html">basic_signal_set::flags</a>
+</dt>
+<dt>io_context, <a class="indexterm" href="reference/io_context/restart.html">io_context::restart</a>
+</dt>
+<dt>signal_set_base, <a class="indexterm" href="reference/signal_set_base/flags.html">signal_set_base::flags</a>
+</dt>
+</dl></dd>
 <dt>result</dt>
 <dd><dl><dt>async_completion, <a class="indexterm" href="reference/async_completion/result.html">async_completion::result</a>
 </dt></dl></dd>
@@ -5600,6 +5845,8 @@
 <dt>cancellation_slot_binder, <a class="indexterm" href="reference/cancellation_slot_binder/result_type.html">cancellation_slot_binder::result_type</a>
 </dt>
 <dt>executor_binder, <a class="indexterm" href="reference/executor_binder/result_type.html">executor_binder::result_type</a>
+</dt>
+<dt>immediate_executor_binder, <a class="indexterm" href="reference/immediate_executor_binder/result_type.html">immediate_executor_binder::result_type</a>
 </dt>
 <dt>ssl::host_name_verification, <a class="indexterm" href="reference/ssl__host_name_verification/result_type.html">ssl::host_name_verification::result_type</a>
 </dt>
@@ -5692,6 +5939,8 @@
 <dt>cancellation_slot_binder, <a class="indexterm" href="reference/cancellation_slot_binder/second_argument_type.html">cancellation_slot_binder::second_argument_type</a>
 </dt>
 <dt>executor_binder, <a class="indexterm" href="reference/executor_binder/second_argument_type.html">executor_binder::second_argument_type</a>
+</dt>
+<dt>immediate_executor_binder, <a class="indexterm" href="reference/immediate_executor_binder/second_argument_type.html">immediate_executor_binder::second_argument_type</a>
 </dt>
 </dl></dd>
 <dt>seek</dt>
@@ -6011,9 +6260,15 @@
 </dt></dl></dd>
 <dt>signal_set, <a class="indexterm" href="reference/signal_set.html">signal_set</a>
 </dt>
+<dt>signal_set_base, <a class="indexterm" href="reference/signal_set_base.html">signal_set_base</a>
+</dt>
 <dt>signature</dt>
-<dd><dl><dt>experimental::parallel_group, <a class="indexterm" href="reference/experimental__parallel_group/signature.html">experimental::parallel_group::signature</a>
-</dt></dl></dd>
+<dd><dl>
+<dt>experimental::parallel_group, <a class="indexterm" href="reference/experimental__parallel_group/signature.html">experimental::parallel_group::signature</a>
+</dt>
+<dt>experimental::ranged_parallel_group, <a class="indexterm" href="reference/experimental__ranged_parallel_group/signature.html">experimental::ranged_parallel_group::signature</a>
+</dt>
+</dl></dd>
 <dt>single_dh_use</dt>
 <dd><dl>
 <dt>ssl::context, <a class="indexterm" href="reference/ssl__context/single_dh_use.html">ssl::context::single_dh_use</a>
@@ -6095,6 +6350,8 @@
 <dt>ip::udp, <a class="indexterm" href="reference/ip__udp/socket.html">ip::udp::socket</a>
 </dt>
 <dt>local::datagram_protocol, <a class="indexterm" href="reference/local__datagram_protocol/socket.html">local::datagram_protocol::socket</a>
+</dt>
+<dt>local::seq_packet_protocol, <a class="indexterm" href="reference/local__seq_packet_protocol/socket.html">local::seq_packet_protocol::socket</a>
 </dt>
 <dt>local::stream_protocol, <a class="indexterm" href="reference/local__stream_protocol/socket.html">local::stream_protocol::socket</a>
 </dt>
@@ -6273,6 +6530,10 @@
 </dt></dl></dd>
 <dt>swap</dt>
 <dd><dl>
+<dt>any_completion_executor, <a class="indexterm" href="reference/any_completion_executor/swap.html">any_completion_executor::swap</a>
+</dt>
+<dt>any_completion_handler, <a class="indexterm" href="reference/any_completion_handler/swap.html">any_completion_handler::swap</a>
+</dt>
 <dt>any_io_executor, <a class="indexterm" href="reference/any_io_executor/swap.html">any_io_executor::swap</a>
 </dt>
 <dt>execution::any_executor, <a class="indexterm" href="reference/execution__any_executor/swap.html">execution::any_executor::swap</a>
@@ -6331,6 +6592,8 @@
 <dl>
 <dt>target</dt>
 <dd><dl>
+<dt>any_completion_executor, <a class="indexterm" href="reference/any_completion_executor/target.html">any_completion_executor::target</a>
+</dt>
 <dt>any_io_executor, <a class="indexterm" href="reference/any_io_executor/target.html">any_io_executor::target</a>
 </dt>
 <dt>execution::any_executor, <a class="indexterm" href="reference/execution__any_executor/target.html">execution::any_executor::target</a>
@@ -6342,6 +6605,8 @@
 <dd><dl>
 <dt>allocator_binder, <a class="indexterm" href="reference/allocator_binder/target_type.html">allocator_binder::target_type</a>
 </dt>
+<dt>any_completion_executor, <a class="indexterm" href="reference/any_completion_executor/target_type.html">any_completion_executor::target_type</a>
+</dt>
 <dt>any_io_executor, <a class="indexterm" href="reference/any_io_executor/target_type.html">any_io_executor::target_type</a>
 </dt>
 <dt>cancellation_slot_binder, <a class="indexterm" href="reference/cancellation_slot_binder/target_type.html">cancellation_slot_binder::target_type</a>
@@ -6351,6 +6616,8 @@
 <dt>executor, <a class="indexterm" href="reference/executor/target_type.html">executor::target_type</a>
 </dt>
 <dt>executor_binder, <a class="indexterm" href="reference/executor_binder/target_type.html">executor_binder::target_type</a>
+</dt>
+<dt>immediate_executor_binder, <a class="indexterm" href="reference/immediate_executor_binder/target_type.html">immediate_executor_binder::target_type</a>
 </dt>
 </dl></dd>
 <dt>terminal</dt>
@@ -6656,10 +6923,20 @@
 </dt>
 <dt>associated_cancellation_slot, <a class="indexterm" href="reference/associated_cancellation_slot/type.html">associated_cancellation_slot::type</a>
 </dt>
+<dt>associated_cancellation_slot&lt;
+          reference_wrapper&lt; T &gt;, CancellationSlot &gt;, <a class="indexterm" href="reference/associated_cancellation_slot_lt__reference_wrapper_lt__T__gt__comma__CancellationSlot__gt_/type.html">associated_cancellation_slot&lt;
+        reference_wrapper&lt; T &gt;, CancellationSlot &gt;::type</a>
+</dt>
 <dt>associated_executor, <a class="indexterm" href="reference/associated_executor/type.html">associated_executor::type</a>
 </dt>
 <dt>associated_executor&lt;
           reference_wrapper&lt; T &gt;, Executor &gt;, <a class="indexterm" href="reference/associated_executor_lt__reference_wrapper_lt__T__gt__comma__Executor__gt_/type.html">associated_executor&lt;
+        reference_wrapper&lt; T &gt;, Executor &gt;::type</a>
+</dt>
+<dt>associated_immediate_executor, <a class="indexterm" href="reference/associated_immediate_executor/type.html">associated_immediate_executor::type</a>
+</dt>
+<dt>associated_immediate_executor&lt;
+          reference_wrapper&lt; T &gt;, Executor &gt;, <a class="indexterm" href="reference/associated_immediate_executor_lt__reference_wrapper_lt__T__gt__comma__Executor__gt_/type.html">associated_immediate_executor&lt;
         reference_wrapper&lt; T &gt;, Executor &gt;::type</a>
 </dt>
 <dt>completion_signature_of, <a class="indexterm" href="reference/completion_signature_of/type.html">completion_signature_of::type</a>
@@ -6689,6 +6966,8 @@
 <dt>ip::udp, <a class="indexterm" href="reference/ip__udp/type.html">ip::udp::type</a>
 </dt>
 <dt>local::datagram_protocol, <a class="indexterm" href="reference/local__datagram_protocol/type.html">local::datagram_protocol::type</a>
+</dt>
+<dt>local::seq_packet_protocol, <a class="indexterm" href="reference/local__seq_packet_protocol/type.html">local::seq_packet_protocol::type</a>
 </dt>
 <dt>local::stream_protocol, <a class="indexterm" href="reference/local__stream_protocol/type.html">local::stream_protocol::type</a>
 </dt>
@@ -6790,6 +7069,9 @@
 </dt></dl></dd>
 <dt>use_private_key_file</dt>
 <dd><dl><dt>ssl::context, <a class="indexterm" href="reference/ssl__context/use_private_key_file.html">ssl::context::use_private_key_file</a>
+</dt></dl></dd>
+<dt>use_promise_t</dt>
+<dd><dl><dt>experimental::use_promise_t, <a class="indexterm" href="reference/experimental__use_promise_t/use_promise_t.html">experimental::use_promise_t::use_promise_t</a>
 </dt></dl></dd>
 <dt>use_rsa_private_key</dt>
 <dd><dl><dt>ssl::context, <a class="indexterm" href="reference/ssl__context/use_rsa_private_key.html">ssl::context::use_rsa_private_key</a>
@@ -6894,6 +7176,8 @@
 </dt>
 <dt>execution::relationship_t::fork_t, <a class="indexterm" href="reference/execution__relationship_t__fork_t/value.html">execution::relationship_t::fork_t::value</a>
 </dt>
+<dt>experimental::is_async_operation_range, <a class="indexterm" href="reference/experimental__is_async_operation_range/value.html">experimental::is_async_operation_range::value</a>
+</dt>
 <dt>is_endpoint_sequence, <a class="indexterm" href="reference/is_endpoint_sequence/value.html">is_endpoint_sequence::value</a>
 </dt>
 <dt>is_match_condition, <a class="indexterm" href="reference/is_match_condition/value.html">is_match_condition::value</a>
@@ -6929,6 +7213,12 @@
 </dl></dd>
 <dt>value_type</dt>
 <dd><dl>
+<dt>any_completion_handler_allocator, <a class="indexterm" href="reference/any_completion_handler_allocator/value_type.html">any_completion_handler_allocator::value_type</a>
+</dt>
+<dt>any_completion_handler_allocator&lt;
+          void, Signatures...&gt;, <a class="indexterm" href="reference/any_completion_handler_allocator_lt__void_comma__Signatures_ellipsis__gt_/value_type.html">any_completion_handler_allocator&lt;
+        void, Signatures...&gt;::value_type</a>
+</dt>
 <dt>awaitable, <a class="indexterm" href="reference/awaitable/value_type.html">awaitable::value_type</a>
 </dt>
 <dt>buffers_iterator, <a class="indexterm" href="reference/buffers_iterator/value_type.html">buffers_iterator::value_type</a>
@@ -7208,14 +7498,11 @@
 </div>
 </div>
 </div>
-<table xmlns:rev="http://www.cs.rpi.edu/~gregod/boost/tools/doc/revision" width="100%"><tr>
-<td align="left"></td>
-<td align="right"><div class="copyright-footer">Copyright © 2003-2022 Christopher M. Kohlhoff<p>
+<div class="copyright-footer">Copyright © 2003-2023 Christopher M. Kohlhoff<p>
         Distributed under the Boost Software License, Version 1.0. (See accompanying
         file LICENSE_1_0.txt or copy at <a href="http://www.boost.org/LICENSE_1_0.txt" target="_top">http://www.boost.org/LICENSE_1_0.txt</a>)
       </p>
-</div></td>
-</tr></table>
+</div>
 <hr>
 <div class="spirit-nav">
 <a accesskey="p" href="history.html"><img src="../prev.png" alt="Prev"></a><a accesskey="u" href="../index.html"><img src="../up.png" alt="Up"></a><a accesskey="h" href="../index.html"><img src="../home.png" alt="Home"></a>

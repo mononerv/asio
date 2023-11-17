@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.12)
-project(asio VERSION 1.24.0)
+project(asio VERSION 1.28.0)
 
 # Install directory setup
 include(GNUInstallDirs)

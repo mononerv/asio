@@ -6,14 +6,15 @@
 <meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
 <link rel="home" href="../../index.html" title="Asio">
 <link rel="up" href="../reference.html" title="Reference">
-<link rel="prev" href="associated_cancellation_slot/type.html" title="associated_cancellation_slot::type">
-<link rel="next" href="associated_executor/get.html" title="associated_executor::get">
+<link rel="prev" href="associated_cancellation_slot_lt__reference_wrapper_lt__T__gt__comma__CancellationSlot__gt_/type.html" title="associated_cancellation_slot&lt; reference_wrapper&lt; T &gt;, CancellationSlot &gt;::type">
+<link rel="next" href="associated_executor/decltype.html" title="associated_executor::decltype">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
 <table cellpadding="2" width="100%"><tr><td valign="top"><img alt="asio C++ library" width="250" height="60" src="../../asio.png"></td></tr></table>
 <hr>
 <div class="spirit-nav">
-<a accesskey="p" href="associated_cancellation_slot/type.html"><img src="../../prev.png" alt="Prev"></a><a accesskey="u" href="../reference.html"><img src="../../up.png" alt="Up"></a><a accesskey="h" href="../../index.html"><img src="../../home.png" alt="Home"></a><a accesskey="n" href="associated_executor/get.html"><img src="../../next.png" alt="Next"></a>
+<a accesskey="p" href="associated_cancellation_slot_lt__reference_wrapper_lt__T__gt__comma__CancellationSlot__gt_/type.html"><img src="../../prev.png" alt="Prev"></a><a accesskey="u" href="../reference.html"><img src="../../up.png" alt="Up"></a><a accesskey="h" href="../../index.html"><img src="../../home.png" alt="Home"></a><a accesskey="n" href="associated_executor/decltype.html"><img src="../../next.png" alt="Next"></a>
 </div>
 <div class="section">
 <div class="titlepage"><div><div><h3 class="title">
@@ -90,14 +91,47 @@
 <tbody><tr>
 <td>
                 <p>
-                  <a class="link" href="associated_executor/get.html" title="associated_executor::get"><span class="bold"><strong>get</strong></span></a> <span class="silver">[static]</span>
+                  <a class="link" href="associated_executor/decltype.html" title="associated_executor::decltype"><span class="bold"><strong>decltype</strong></span></a> <span class="silver">[static]</span>
                 </p>
               </td>
 <td>
                 <p>
                   If T has a nested type executor_type, returns t.get_executor().
-                  Otherwise returns ex.
+                  Otherwise returns type(). <br> <span class="silver"> —</span><br> If T has a nested type
+                  executor_type, returns t.get_executor(). Otherwise returns ex.
                 </p>
+              </td>
+</tr></tbody>
+</table></div>
+<h5>
+<a name="asio.reference.associated_executor.h2"></a>
+        <span><a name="asio.reference.associated_executor.data_members"></a></span><a class="link" href="associated_executor.html#asio.reference.associated_executor.data_members">Data
+        Members</a>
+      </h5>
+<div class="informaltable"><table class="table">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead><tr>
+<th>
+                <p>
+                  Name
+                </p>
+              </th>
+<th>
+                <p>
+                  Description
+                </p>
+              </th>
+</tr></thead>
+<tbody><tr>
+<td>
+                <p>
+                  <a class="link" href="associated_executor/noexcept.html" title="associated_executor::noexcept"><span class="bold"><strong>noexcept</strong></span></a>
+                </p>
+              </td>
+<td>
               </td>
 </tr></tbody>
 </table></div>
@@ -119,16 +153,18 @@
 <li class="listitem">
             Provide a noexcept static member function named <code class="computeroutput"><span class="identifier">get</span></code>,
             callable as <code class="computeroutput"><span class="identifier">get</span><span class="special">(</span><span class="identifier">t</span><span class="special">)</span></code>
-            and with return type <code class="computeroutput"><span class="identifier">type</span></code>.
+            and with return type <code class="computeroutput"><span class="identifier">type</span></code>
+            or a (possibly const) reference to <code class="computeroutput"><span class="identifier">type</span></code>.
           </li>
 <li class="listitem">
             Provide a noexcept static member function named <code class="computeroutput"><span class="identifier">get</span></code>,
             callable as <code class="computeroutput"><span class="identifier">get</span><span class="special">(</span><span class="identifier">t</span><span class="special">,</span><span class="identifier">e</span><span class="special">)</span></code>
-            and with return type <code class="computeroutput"><span class="identifier">type</span></code>.
+            and with return type <code class="computeroutput"><span class="identifier">type</span></code>
+            or a (possibly const) reference to <code class="computeroutput"><span class="identifier">type</span></code>.
           </li>
 </ul></div>
 <h5>
-<a name="asio.reference.associated_executor.h2"></a>
+<a name="asio.reference.associated_executor.h3"></a>
         <span><a name="asio.reference.associated_executor.requirements"></a></span><a class="link" href="associated_executor.html#asio.reference.associated_executor.requirements">Requirements</a>
       </h5>
 <p>
@@ -138,17 +174,14 @@
         <span class="emphasis"><em>Convenience header: </em></span><code class="literal">asio.hpp</code>
       </p>
 </div>
-<table xmlns:rev="http://www.cs.rpi.edu/~gregod/boost/tools/doc/revision" width="100%"><tr>
-<td align="left"></td>
-<td align="right"><div class="copyright-footer">Copyright © 2003-2022 Christopher M. Kohlhoff<p>
+<div class="copyright-footer">Copyright © 2003-2023 Christopher M. Kohlhoff<p>
         Distributed under the Boost Software License, Version 1.0. (See accompanying
         file LICENSE_1_0.txt or copy at <a href="http://www.boost.org/LICENSE_1_0.txt" target="_top">http://www.boost.org/LICENSE_1_0.txt</a>)
       </p>
-</div></td>
-</tr></table>
+</div>
 <hr>
 <div class="spirit-nav">
-<a accesskey="p" href="associated_cancellation_slot/type.html"><img src="../../prev.png" alt="Prev"></a><a accesskey="u" href="../reference.html"><img src="../../up.png" alt="Up"></a><a accesskey="h" href="../../index.html"><img src="../../home.png" alt="Home"></a><a accesskey="n" href="associated_executor/get.html"><img src="../../next.png" alt="Next"></a>
+<a accesskey="p" href="associated_cancellation_slot_lt__reference_wrapper_lt__T__gt__comma__CancellationSlot__gt_/type.html"><img src="../../prev.png" alt="Prev"></a><a accesskey="u" href="../reference.html"><img src="../../up.png" alt="Up"></a><a accesskey="h" href="../../index.html"><img src="../../home.png" alt="Home"></a><a accesskey="n" href="associated_executor/decltype.html"><img src="../../next.png" alt="Next"></a>
 </div>
 </body>
 </html>
