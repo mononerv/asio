@@ -23,17 +23,16 @@
 <p>
           <a class="indexterm" name="asio.indexterm.basic_yield_context.operator_lb__rb_"></a> 
 Return
-          a yield context that sets the specified <a class="link" href="../error_code.html" title="error_code"><code class="computeroutput"><span class="identifier">error_code</span></code></a>.
+          a yield context that sets the specified error_code.
         </p>
 <pre class="programlisting"><span class="identifier">basic_yield_context</span> <span class="keyword">operator</span><span class="special">[](</span>
     <span class="identifier">asio</span><span class="special">::</span><span class="identifier">error_code</span> <span class="special">&amp;</span> <span class="identifier">ec</span><span class="special">)</span> <span class="keyword">const</span><span class="special">;</span>
 </pre>
 <p>
           By default, when a yield context is used with an asynchronous operation,
-          a non-success <a class="link" href="../error_code.html" title="error_code"><code class="computeroutput"><span class="identifier">error_code</span></code></a>
-          is converted to <a class="link" href="../system_error.html" title="system_error"><code class="computeroutput"><span class="identifier">system_error</span></code></a> and thrown. This
-          operator may be used to specify an <a class="link" href="../error_code.html" title="error_code"><code class="computeroutput"><span class="identifier">error_code</span></code></a> object that should
-          instead be set with the asynchronous operation's result. For example:
+          a non-success error_code is converted to system_error and thrown. This
+          operator may be used to specify an error_code object that should instead
+          be set with the asynchronous operation's result. For example:
         </p>
 <pre class="programlisting"><span class="keyword">template</span> <span class="special">&lt;</span><span class="keyword">typename</span> <span class="identifier">Executor</span><span class="special">&gt;</span>
 <span class="keyword">void</span> <span class="identifier">my_coroutine</span><span class="special">(</span><span class="identifier">basic_yield_context</span><span class="special">&lt;</span><span class="identifier">Executor</span><span class="special">&gt;</span> <span class="identifier">yield</span><span class="special">)</span>
@@ -48,7 +47,7 @@ Return
 <span class="special">}</span>
 </pre>
 </div>
-<div class="copyright-footer">Copyright © 2003-2023 Christopher M. Kohlhoff<p>
+<div class="copyright-footer">Copyright © 2003-2024 Christopher M. Kohlhoff<p>
         Distributed under the Boost Software License, Version 1.0. (See accompanying
         file LICENSE_1_0.txt or copy at <a href="http://www.boost.org/LICENSE_1_0.txt" target="_top">http://www.boost.org/LICENSE_1_0.txt</a>)
       </p>

@@ -109,7 +109,7 @@
               </td>
 <td>
                 <p>
-                  Wrap a function object in a packaged task.
+                  Wrap a function object in a packaged task. <br> <span class="silver"> —</span><br>
                 </p>
               </td>
 </tr>
@@ -160,14 +160,13 @@
         value <code class="computeroutput"><span class="identifier">asio</span><span class="special">::</span><span class="identifier">use_future</span></code>. For example:
       </p>
 <pre class="programlisting"><span class="identifier">std</span><span class="special">::</span><span class="identifier">future</span><span class="special">&lt;</span><span class="identifier">std</span><span class="special">::</span><span class="identifier">size_t</span><span class="special">&gt;</span> <span class="identifier">my_future</span>
-  <span class="special">=</span> <span class="identifier">my_socket</span><span class="special">.</span><span class="identifier">async_read_some</span><span class="special">(</span><span class="identifier">my_buffer</span><span class="special">,</span> <span class="identifier">asio</span><span class="special">::</span><span class="identifier">use_future</span><span class="special">);</span>
+ <span class="special">=</span> <span class="identifier">my_socket</span><span class="special">.</span><span class="identifier">async_read_some</span><span class="special">(</span><span class="identifier">my_buffer</span><span class="special">,</span> <span class="identifier">asio</span><span class="special">::</span><span class="identifier">use_future</span><span class="special">);</span>
 </pre>
 <p>
         The initiating function (async_read_some in the above example) returns a
         future that will receive the result of the operation. If the operation completes
-        with an <a class="link" href="error_code.html" title="error_code"><code class="computeroutput"><span class="identifier">error_code</span></code></a>
-        indicating failure, it is converted into a <a class="link" href="system_error.html" title="system_error"><code class="computeroutput"><span class="identifier">system_error</span></code></a> and passed back to
-        the caller via the future.
+        with an error_code indicating failure, it is converted into a system_error
+        and passed back to the caller via the future.
       </p>
 <h5>
 <a name="asio.reference.use_future_t.h2"></a>
@@ -180,7 +179,7 @@
         <span class="emphasis"><em>Convenience header: </em></span><code class="literal">asio.hpp</code>
       </p>
 </div>
-<div class="copyright-footer">Copyright © 2003-2023 Christopher M. Kohlhoff<p>
+<div class="copyright-footer">Copyright © 2003-2024 Christopher M. Kohlhoff<p>
         Distributed under the Boost Software License, Version 1.0. (See accompanying
         file LICENSE_1_0.txt or copy at <a href="http://www.boost.org/LICENSE_1_0.txt" target="_top">http://www.boost.org/LICENSE_1_0.txt</a>)
       </p>

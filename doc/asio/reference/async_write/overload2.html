@@ -35,7 +35,7 @@
     <span class="keyword">const</span> <span class="identifier">ConstBufferSequence</span> <span class="special">&amp;</span> <span class="identifier">buffers</span><span class="special">,</span>
     <span class="identifier">CompletionCondition</span> <span class="identifier">completion_condition</span><span class="special">,</span>
     <span class="identifier">WriteToken</span> <span class="special">&amp;&amp;</span> <span class="identifier">token</span><span class="special">,</span>
-    <span class="keyword">typename</span> <span class="identifier">constraint</span><span class="special">&lt;</span> <span class="identifier">is_const_buffer_sequence</span><span class="special">&lt;</span> <span class="identifier">ConstBufferSequence</span> <span class="special">&gt;::</span><span class="identifier">value</span> <span class="special">&gt;::</span><span class="identifier">type</span>  <span class="special">=</span> <span class="number">0</span><span class="special">);</span>
+    <span class="identifier">constraint_t</span><span class="special">&lt;</span> <span class="identifier">is_const_buffer_sequence</span><span class="special">&lt;</span> <span class="identifier">ConstBufferSequence</span> <span class="special">&gt;::</span><span class="identifier">value</span> <span class="special">&gt;</span>  <span class="special">=</span> <span class="number">0</span><span class="special">);</span>
 </pre>
 <p>
           This function is used to asynchronously write a certain number of bytes
@@ -143,9 +143,9 @@
           To write a single data buffer use the <a class="link" href="../buffer.html" title="buffer"><code class="computeroutput"><span class="identifier">buffer</span></code></a> function as follows:
         </p>
 <pre class="programlisting"><span class="identifier">asio</span><span class="special">::</span><span class="identifier">async_write</span><span class="special">(</span><span class="identifier">s</span><span class="special">,</span>
-    <span class="identifier">asio</span><span class="special">::</span><span class="identifier">buffer</span><span class="special">(</span><span class="identifier">data</span><span class="special">,</span> <span class="identifier">size</span><span class="special">),</span>
-    <span class="identifier">asio</span><span class="special">::</span><span class="identifier">transfer_at_least</span><span class="special">(</span><span class="number">32</span><span class="special">),</span>
-    <span class="identifier">handler</span><span class="special">);</span>
+   <span class="identifier">asio</span><span class="special">::</span><span class="identifier">buffer</span><span class="special">(</span><span class="identifier">data</span><span class="special">,</span> <span class="identifier">size</span><span class="special">),</span>
+   <span class="identifier">asio</span><span class="special">::</span><span class="identifier">transfer_at_least</span><span class="special">(</span><span class="number">32</span><span class="special">),</span>
+   <span class="identifier">handler</span><span class="special">);</span>
 </pre>
 <p>
           See the <a class="link" href="../buffer.html" title="buffer"><code class="computeroutput"><span class="identifier">buffer</span></code></a>
@@ -175,7 +175,7 @@
           operation.
         </p>
 </div>
-<div class="copyright-footer">Copyright © 2003-2023 Christopher M. Kohlhoff<p>
+<div class="copyright-footer">Copyright © 2003-2024 Christopher M. Kohlhoff<p>
         Distributed under the Boost Software License, Version 1.0. (See accompanying
         file LICENSE_1_0.txt or copy at <a href="http://www.boost.org/LICENSE_1_0.txt" target="_top">http://www.boost.org/LICENSE_1_0.txt</a>)
       </p>

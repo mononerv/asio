@@ -28,7 +28,7 @@
         </p>
 <pre class="programlisting"><span class="keyword">template</span><span class="special">&lt;</span>
     <span class="keyword">typename</span> <a class="link" href="../LegacyCompletionHandler.html" title="Legacy completion handler requirements">LegacyCompletionHandler</a><span class="special">&gt;</span>
-<a class="link" href="../asynchronous_operations.html#asio.reference.asynchronous_operations.automatic_deduction_of_initiating_function_return_type"><span class="emphasis"><em>DEDUCED</em></span></a> <span class="identifier">dispatch</span><span class="special">(</span>
+<span class="keyword">auto</span> <span class="identifier">dispatch</span><span class="special">(</span>
     <span class="identifier">LegacyCompletionHandler</span> <span class="special">&amp;&amp;</span> <span class="identifier">handler</span><span class="special">);</span>
 </pre>
 <p>
@@ -73,8 +73,7 @@
         </p>
 <div class="itemizedlist"><ul class="itemizedlist" type="disc">
 <li class="listitem">
-              the handler's <code class="computeroutput"><span class="identifier">asio_handler_allocate</span></code>
-              function; or
+              the handler's associated allocator; or
             </li>
 <li class="listitem">
               the handler's copy constructor
@@ -84,7 +83,7 @@
           throws an exception.
         </p>
 </div>
-<div class="copyright-footer">Copyright © 2003-2023 Christopher M. Kohlhoff<p>
+<div class="copyright-footer">Copyright © 2003-2024 Christopher M. Kohlhoff<p>
         Distributed under the Boost Software License, Version 1.0. (See accompanying
         file LICENSE_1_0.txt or copy at <a href="http://www.boost.org/LICENSE_1_0.txt" target="_top">http://www.boost.org/LICENSE_1_0.txt</a>)
       </p>

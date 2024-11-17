@@ -22,6 +22,241 @@
 </h2></div></div></div>
 <h4>
 <a name="asio.history.h0"></a>
+      <span><a name="asio.history.asio_1_30_2"></a></span><a class="link" href="history.html#asio.history.asio_1_30_2">Asio
+      1.30.2</a>
+    </h4>
+<div class="itemizedlist"><ul class="itemizedlist" type="disc">
+<li class="listitem">
+          Fixed <code class="computeroutput"><span class="identifier">co_spawn</span></code> to correctly
+          propagate exceptions resulting from cancellation to the completion handler.
+        </li>
+<li class="listitem">
+          Added calls to <code class="computeroutput"><span class="identifier">std</span><span class="special">::</span><span class="identifier">launder</span></code> to fix undefined behaviour in
+          <code class="computeroutput"><span class="identifier">awaitable</span><span class="special">&lt;&gt;</span></code>
+          internal storage.
+        </li>
+<li class="listitem">
+          Added missing handling of the <code class="computeroutput"><span class="identifier">file_base</span><span class="special">::</span><span class="identifier">append</span></code>
+          flag in the Windows implementation of file support.
+        </li>
+<li class="listitem">
+          Updated the socket and descriptor implementations to add more cases where
+          they will fall back to <code class="computeroutput"><span class="identifier">fcntl</span></code>
+          if a call to <code class="computeroutput"><span class="identifier">ioctl</span></code> fails.
+        </li>
+<li class="listitem">
+          Fixed a compile error that occurred when channels and <code class="computeroutput"><span class="identifier">experimental</span><span class="special">::</span><span class="identifier">coro</span></code>
+          were both used in the same translation unit.
+        </li>
+<li class="listitem">
+          Added missing CancellationSlot type requirements to documentation.
+        </li>
+<li class="listitem">
+          Minor documentation updates.
+        </li>
+</ul></div>
+<h4>
+<a name="asio.history.h1"></a>
+      <span><a name="asio.history.asio_1_30_1"></a></span><a class="link" href="history.html#asio.history.asio_1_30_1">Asio
+      1.30.1</a>
+    </h4>
+<div class="itemizedlist"><ul class="itemizedlist" type="disc">
+<li class="listitem">
+          Fixed the <code class="computeroutput"><span class="identifier">async_result</span></code>
+          primary template's concept checking to correctly handle lvalue-qualified
+          completion signatures.
+        </li>
+<li class="listitem">
+          Fixed some compile errors that could arise when using the <code class="computeroutput"><span class="identifier">bind_allocator</span></code>, <code class="computeroutput"><span class="identifier">bind_executor</span></code>,
+          <code class="computeroutput"><span class="identifier">bind_immediate_executor</span></code>
+          and <code class="computeroutput"><span class="identifier">bind_cancellation_slot</span></code>
+          completion token adapters to adapt each other.
+        </li>
+<li class="listitem">
+          Changed the <code class="computeroutput"><span class="identifier">experimental</span><span class="special">::</span><span class="identifier">ranged_parallel_group</span></code>
+          operation so that it moves the <code class="computeroutput"><span class="identifier">completion_order</span></code>
+          vector when invoking the completion handler.
+        </li>
+<li class="listitem">
+          Fixed the <code class="literal">asio/experimental/parallel_group.hpp</code> header
+          so that it is self-contained.
+        </li>
+<li class="listitem">
+          Fixed some warnings about deprecated implicit copy constructors on <code class="computeroutput"><span class="identifier">ip</span><span class="special">::</span><span class="identifier">basic_resolver_query</span></code>, <code class="computeroutput"><span class="identifier">io_context</span><span class="special">::</span><span class="identifier">strand</span></code>,
+          and <code class="computeroutput"><span class="identifier">coroutine</span></code>.
+        </li>
+<li class="listitem">
+          Updated the version specification used to initialise Winsock.
+        </li>
+<li class="listitem">
+          Fixed the documentation hyperlinks for the deduced return types of asynchronous
+          operations' initiating functions.
+        </li>
+</ul></div>
+<h4>
+<a name="asio.history.h2"></a>
+      <span><a name="asio.history.asio_1_30_0"></a></span><a class="link" href="history.html#asio.history.asio_1_30_0">Asio
+      1.30.0</a>
+    </h4>
+<div class="itemizedlist"><ul class="itemizedlist" type="disc">
+<li class="listitem">
+          Fixed compatibility between <code class="computeroutput"><span class="identifier">any_completion_handler</span></code>
+          and compilation using <code class="computeroutput"><span class="identifier">ASIO_USE_TS_EXECUTOR_AS_DEFAULT</span></code>.
+        </li>
+<li class="listitem">
+          Fixed a crash that may occur when attempting to access a default-constructed
+          <code class="computeroutput"><span class="identifier">any_completion_handler</span></code>
+          object's associators.
+        </li>
+<li class="listitem">
+          Fixed <code class="computeroutput"><span class="identifier">ssl</span><span class="special">::</span><span class="identifier">stream</span><span class="special">&lt;&gt;</span></code>
+          class's <code class="computeroutput"><span class="identifier">async_handshake</span></code>
+          operation so that it works with a defaulted completion token.
+        </li>
+<li class="listitem">
+          Updated all examples to use C++11 as the minimum language standard.
+        </li>
+</ul></div>
+<h4>
+<a name="asio.history.h3"></a>
+      <span><a name="asio.history.asio_1_29_0"></a></span><a class="link" href="history.html#asio.history.asio_1_29_0">Asio
+      1.29.0</a>
+    </h4>
+<div class="itemizedlist"><ul class="itemizedlist" type="disc">
+<li class="listitem">
+          Changed to require C++11 as the minimum language standard.
+        </li>
+<li class="listitem">
+          Removed deprecated functionality from the <code class="computeroutput"><span class="identifier">asio</span><span class="special">::</span><span class="identifier">execution</span></code>
+          namespace.
+        </li>
+<li class="listitem">
+          Removed deprecated invocation and allocation hooks.
+        </li>
+<li class="listitem">
+          Added compatibility between Asio's placeholders and <code class="computeroutput"><span class="identifier">std</span><span class="special">::</span><span class="identifier">bind</span></code>.
+        </li>
+<li class="listitem">
+          Added <code class="computeroutput"><span class="identifier">try_send_via_dispatch</span></code>
+          and <code class="computeroutput"><span class="identifier">try_send_n_via_dispatch</span></code>
+          functions to channels.
+        </li>
+<li class="listitem">
+          Improved C++11 support for multi-signature channels.
+        </li>
+<li class="listitem">
+          Fixed compatibility between channel asynchronous operations and <code class="computeroutput"><span class="identifier">any_completion_handler</span></code>.
+        </li>
+<li class="listitem">
+          Added missing equality operators for mixed property types belonging to
+          the same category.
+        </li>
+<li class="listitem">
+          Fixed an issue where <code class="computeroutput"><span class="identifier">spawn</span></code>-based
+          stackful coroutines would terminate the program when used with asynchronous
+          operations that have a completion signature starting with <code class="computeroutput"><span class="identifier">std</span><span class="special">::</span><span class="identifier">exception_ptr</span></code>.
+        </li>
+</ul></div>
+<h4>
+<a name="asio.history.h4"></a>
+      <span><a name="asio.history.asio_1_28_2"></a></span><a class="link" href="history.html#asio.history.asio_1_28_2">Asio
+      1.28.2</a>
+    </h4>
+<div class="itemizedlist"><ul class="itemizedlist" type="disc">
+<li class="listitem">
+          Fixed the completion token adapters <code class="computeroutput"><span class="identifier">bind_allocator</span></code>,
+          <code class="computeroutput"><span class="identifier">bind_cancellation_slot</span></code>
+          and <code class="computeroutput"><span class="identifier">bind_immediate_executor</span></code>
+          to not require a <code class="computeroutput"><span class="identifier">return_type</span></code>
+          type alias in the adapted <code class="computeroutput"><span class="identifier">async_result</span></code>
+          specialisation.
+        </li>
+<li class="listitem">
+          Fixed a potental crash due to an object lifetime issue in the <code class="computeroutput"><span class="identifier">co_spawn</span></code> operation's cancellation support.
+        </li>
+<li class="listitem">
+          Enabled compiler-supported thread locals on more target platforms, using
+          the <code class="computeroutput"><span class="keyword">thread_local</span></code> keyword if
+          available.
+        </li>
+<li class="listitem">
+          Fixed the documentation of the per-operation cancellation behaviour for
+          <code class="computeroutput"><span class="identifier">experimental</span><span class="special">::</span><span class="identifier">co_composed</span></code> to correctly state that terminal
+          cancellation is enabled by default.
+        </li>
+<li class="listitem">
+          Documented the per-operation cancellation behaviour of <code class="computeroutput"><span class="identifier">async_compose</span></code>.
+        </li>
+<li class="listitem">
+          Added <code class="computeroutput"><span class="identifier">bind_immediate_executor</span></code>
+          to the <code class="computeroutput"><span class="identifier">Completion</span> <span class="identifier">Token</span>
+          <span class="identifier">Adapters</span></code> overview.
+        </li>
+<li class="listitem">
+          Added an example illustrating how to use an <code class="computeroutput"><span class="identifier">experimental</span>
+          <span class="identifier">channel</span></code> for mutual exclusion
+          between cooperating asynchronous actors.
+        </li>
+<li class="listitem">
+          Added an example showing how to write a minimal completion executor.
+        </li>
+</ul></div>
+<h4>
+<a name="asio.history.h5"></a>
+      <span><a name="asio.history.asio_1_28_1"></a></span><a class="link" href="history.html#asio.history.asio_1_28_1">Asio
+      1.28.1</a>
+    </h4>
+<div class="itemizedlist"><ul class="itemizedlist" type="disc">
+<li class="listitem">
+          Added missing compatibility with <code class="computeroutput"><span class="identifier">associated_immediate_executor</span></code>
+          to <code class="computeroutput"><span class="identifier">any_completion_handler</span></code>.
+        </li>
+<li class="listitem">
+          Fixed a null pointer dereference that occurs when using <code class="computeroutput"><span class="identifier">query</span></code>,
+          <code class="computeroutput"><span class="identifier">require</span></code> or <code class="computeroutput"><span class="identifier">prefer</span></code> with an empty <code class="computeroutput"><span class="identifier">any_executor</span></code>.
+        </li>
+<li class="listitem">
+          Added a workaround in <code class="computeroutput"><span class="identifier">experimental</span><span class="special">::</span><span class="identifier">coro</span></code>
+          for a spurious syntax error when compiling with MSVC.
+        </li>
+<li class="listitem">
+          Fixed an integer truncation issue in per-operation cancellation, when using
+          the reactor backend on 64-bit Windows.
+        </li>
+<li class="listitem">
+          Added a compile-time check for a minimum Linux kernel version of 5.10,
+          when <code class="literal">io_uring</code> support is enabled.
+        </li>
+<li class="listitem">
+          Fixed a compile error in the converting move constructors for <code class="computeroutput"><span class="identifier">experimental</span><span class="special">::</span><span class="identifier">basic_channel</span></code> and <code class="computeroutput"><span class="identifier">experimental</span><span class="special">::</span><span class="identifier">basic_concurrent_channel</span></code>.
+        </li>
+<li class="listitem">
+          Fixed a memory leak on some <code class="computeroutput"><span class="identifier">signal_set</span></code>
+          error handling code paths.
+        </li>
+<li class="listitem">
+          Fixed <code class="computeroutput"><span class="identifier">bad_address_cast</span></code>
+          to not use a deprecated implicit copy constructor.
+        </li>
+<li class="listitem">
+          Fixed a copy/paste error in the <code class="computeroutput"><span class="identifier">dev_poll_reactor</span></code>
+          backend.
+        </li>
+<li class="listitem">
+          Fixed the <code class="literal">io_uring</code> backend to ensure the internal timeout
+          operations, used to implement <code class="computeroutput"><span class="identifier">io_context</span><span class="special">::</span><span class="identifier">run_for</span></code>
+          and <code class="computeroutput"><span class="identifier">io_context</span><span class="special">::</span><span class="identifier">run_until</span></code>, are cleaned up correctly.
+        </li>
+<li class="listitem">
+          Eliminated some duplicated state in the <code class="computeroutput"><span class="identifier">co_spawn</span></code>
+          implementation's entry point, reducing memory consumption.
+        </li>
+<li class="listitem">
+          Added c++14 echo examples to boostify script.
+        </li>
+</ul></div>
+<h4>
+<a name="asio.history.h6"></a>
       <span><a name="asio.history.asio_1_28_0"></a></span><a class="link" href="history.html#asio.history.asio_1_28_0">Asio
       1.28.0</a>
     </h4>
@@ -120,7 +355,7 @@
         </li>
 </ul></div>
 <h4>
-<a name="asio.history.h1"></a>
+<a name="asio.history.h7"></a>
       <span><a name="asio.history.asio_1_27_0"></a></span><a class="link" href="history.html#asio.history.asio_1_27_0">Asio
       1.27.0</a>
     </h4>
@@ -274,7 +509,7 @@
         </li>
 </ul></div>
 <h4>
-<a name="asio.history.h2"></a>
+<a name="asio.history.h8"></a>
       <span><a name="asio.history.asio_1_26_0"></a></span><a class="link" href="history.html#asio.history.asio_1_26_0">Asio
       1.26.0</a>
     </h4>
@@ -330,7 +565,7 @@
         </li>
 </ul></div>
 <h4>
-<a name="asio.history.h3"></a>
+<a name="asio.history.h9"></a>
       <span><a name="asio.history.asio_1_25_0"></a></span><a class="link" href="history.html#asio.history.asio_1_25_0">Asio
       1.25.0</a>
     </h4>
@@ -584,7 +819,7 @@
         </li>
 </ul></div>
 <h4>
-<a name="asio.history.h4"></a>
+<a name="asio.history.h10"></a>
       <span><a name="asio.history.asio_1_24_0"></a></span><a class="link" href="history.html#asio.history.asio_1_24_0">Asio
       1.24.0</a>
     </h4>
@@ -635,7 +870,7 @@
         </li>
 </ul></div>
 <h4>
-<a name="asio.history.h5"></a>
+<a name="asio.history.h11"></a>
       <span><a name="asio.history.asio_1_23_0"></a></span><a class="link" href="history.html#asio.history.asio_1_23_0">Asio
       1.23.0</a>
     </h4>
@@ -870,7 +1105,7 @@
         </li>
 </ul></div>
 <h4>
-<a name="asio.history.h6"></a>
+<a name="asio.history.h12"></a>
       <span><a name="asio.history.asio_1_22_2"></a></span><a class="link" href="history.html#asio.history.asio_1_22_2">Asio
       1.22.2</a>
     </h4>
@@ -925,7 +1160,7 @@
         </li>
 </ul></div>
 <h4>
-<a name="asio.history.h7"></a>
+<a name="asio.history.h13"></a>
       <span><a name="asio.history.asio_1_22_1"></a></span><a class="link" href="history.html#asio.history.asio_1_22_1">Asio
       1.22.1</a>
     </h4>
@@ -1115,7 +1350,7 @@
         </li>
 </ul></div>
 <h4>
-<a name="asio.history.h8"></a>
+<a name="asio.history.h14"></a>
       <span><a name="asio.history.asio_1_22_0"></a></span><a class="link" href="history.html#asio.history.asio_1_22_0">Asio
       1.22.0</a>
     </h4>
@@ -1178,7 +1413,7 @@
         </li>
 </ul></div>
 <h4>
-<a name="asio.history.h9"></a>
+<a name="asio.history.h15"></a>
       <span><a name="asio.history.asio_1_21_0"></a></span><a class="link" href="history.html#asio.history.asio_1_21_0">Asio
       1.21.0</a>
     </h4>
@@ -1391,7 +1626,7 @@
         </li>
 </ul></div>
 <h4>
-<a name="asio.history.h10"></a>
+<a name="asio.history.h16"></a>
       <span><a name="asio.history.asio_1_20_0"></a></span><a class="link" href="history.html#asio.history.asio_1_20_0">Asio
       1.20.0</a>
     </h4>
@@ -1419,7 +1654,7 @@
         </li>
 </ul></div>
 <h4>
-<a name="asio.history.h11"></a>
+<a name="asio.history.h17"></a>
       <span><a name="asio.history.asio_1_19_2"></a></span><a class="link" href="history.html#asio.history.asio_1_19_2">Asio
       1.19.2</a>
     </h4>
@@ -1481,7 +1716,7 @@
         </li>
 </ul></div>
 <h4>
-<a name="asio.history.h12"></a>
+<a name="asio.history.h18"></a>
       <span><a name="asio.history.asio_1_19_1"></a></span><a class="link" href="history.html#asio.history.asio_1_19_1">Asio
       1.19.1</a>
     </h4>
@@ -1520,7 +1755,7 @@
         </li>
 </ul></div>
 <h4>
-<a name="asio.history.h13"></a>
+<a name="asio.history.h19"></a>
       <span><a name="asio.history.asio_1_19_0"></a></span><a class="link" href="history.html#asio.history.asio_1_19_0">Asio
       1.19.0</a>
     </h4>
@@ -2053,7 +2288,7 @@
         </li>
 </ul></div>
 <h4>
-<a name="asio.history.h14"></a>
+<a name="asio.history.h20"></a>
       <span><a name="asio.history.asio_1_18_2"></a></span><a class="link" href="history.html#asio.history.asio_1_18_2">Asio
       1.18.2</a>
     </h4>
@@ -2122,7 +2357,7 @@
         </li>
 </ul></div>
 <h4>
-<a name="asio.history.h15"></a>
+<a name="asio.history.h21"></a>
       <span><a name="asio.history.asio_1_18_1"></a></span><a class="link" href="history.html#asio.history.asio_1_18_1">Asio
       1.18.1</a>
     </h4>
@@ -2252,7 +2487,7 @@
         </li>
 </ul></div>
 <h4>
-<a name="asio.history.h16"></a>
+<a name="asio.history.h22"></a>
       <span><a name="asio.history.asio_1_18_0"></a></span><a class="link" href="history.html#asio.history.asio_1_18_0">Asio
       1.18.0</a>
     </h4>
@@ -2356,7 +2591,7 @@
         </li>
 </ul></div>
 <h4>
-<a name="asio.history.h17"></a>
+<a name="asio.history.h23"></a>
       <span><a name="asio.history.asio_1_17_0"></a></span><a class="link" href="history.html#asio.history.asio_1_17_0">Asio
       1.17.0</a>
     </h4>
@@ -2629,7 +2864,7 @@
         </li>
 </ul></div>
 <h4>
-<a name="asio.history.h18"></a>
+<a name="asio.history.h24"></a>
       <span><a name="asio.history.asio_1_16_1"></a></span><a class="link" href="history.html#asio.history.asio_1_16_1">Asio
       1.16.1</a>
     </h4>
@@ -2722,7 +2957,7 @@
         </li>
 </ul></div>
 <h4>
-<a name="asio.history.h19"></a>
+<a name="asio.history.h25"></a>
       <span><a name="asio.history.asio_1_16_0"></a></span><a class="link" href="history.html#asio.history.asio_1_16_0">Asio
       1.16.0</a>
     </h4>
@@ -2894,7 +3129,7 @@
         </li>
 </ul></div>
 <h4>
-<a name="asio.history.h20"></a>
+<a name="asio.history.h26"></a>
       <span><a name="asio.history.asio_1_14_1"></a></span><a class="link" href="history.html#asio.history.asio_1_14_1">Asio
       1.14.1</a>
     </h4>
@@ -2944,7 +3179,7 @@
         </li>
 </ul></div>
 <h4>
-<a name="asio.history.h21"></a>
+<a name="asio.history.h27"></a>
       <span><a name="asio.history.asio_1_14_0"></a></span><a class="link" href="history.html#asio.history.asio_1_14_0">Asio
       1.14.0</a>
     </h4>
@@ -2968,7 +3203,7 @@
         </li>
 </ul></div>
 <h4>
-<a name="asio.history.h22"></a>
+<a name="asio.history.h28"></a>
       <span><a name="asio.history.asio_1_13_0"></a></span><a class="link" href="history.html#asio.history.asio_1_13_0">Asio
       1.13.0</a>
     </h4>
@@ -3297,7 +3532,7 @@
         </li>
 </ul></div>
 <h4>
-<a name="asio.history.h23"></a>
+<a name="asio.history.h29"></a>
       <span><a name="asio.history.asio_1_12_2"></a></span><a class="link" href="history.html#asio.history.asio_1_12_2">Asio
       1.12.2</a>
     </h4>
@@ -3370,7 +3605,7 @@
         </li>
 </ul></div>
 <h4>
-<a name="asio.history.h24"></a>
+<a name="asio.history.h30"></a>
       <span><a name="asio.history.asio_1_12_1"></a></span><a class="link" href="history.html#asio.history.asio_1_12_1">Asio
       1.12.1</a>
     </h4>
@@ -3496,7 +3731,7 @@
         </li>
 </ul></div>
 <h4>
-<a name="asio.history.h25"></a>
+<a name="asio.history.h31"></a>
       <span><a name="asio.history.asio_1_12_0"></a></span><a class="link" href="history.html#asio.history.asio_1_12_0">Asio
       1.12.0</a>
     </h4>
@@ -3535,7 +3770,7 @@
         </li>
 </ul></div>
 <h4>
-<a name="asio.history.h26"></a>
+<a name="asio.history.h32"></a>
       <span><a name="asio.history.asio_1_11_0"></a></span><a class="link" href="history.html#asio.history.asio_1_11_0">Asio
       1.11.0</a>
     </h4>
@@ -3761,7 +3996,7 @@
         </li>
 </ul></div>
 <h4>
-<a name="asio.history.h27"></a>
+<a name="asio.history.h33"></a>
       <span><a name="asio.history.asio_1_10_5"></a></span><a class="link" href="history.html#asio.history.asio_1_10_5">Asio
       1.10.5</a>
     </h4>
@@ -3804,7 +4039,7 @@
         </li>
 </ul></div>
 <h4>
-<a name="asio.history.h28"></a>
+<a name="asio.history.h34"></a>
       <span><a name="asio.history.asio_1_10_4"></a></span><a class="link" href="history.html#asio.history.asio_1_10_4">Asio
       1.10.4</a>
     </h4>
@@ -3826,7 +4061,7 @@
         </li>
 </ul></div>
 <h4>
-<a name="asio.history.h29"></a>
+<a name="asio.history.h35"></a>
       <span><a name="asio.history.asio_1_10_3"></a></span><a class="link" href="history.html#asio.history.asio_1_10_3">Asio
       1.10.3</a>
     </h4>
@@ -3860,7 +4095,7 @@
         </li>
 </ul></div>
 <h4>
-<a name="asio.history.h30"></a>
+<a name="asio.history.h36"></a>
       <span><a name="asio.history.asio_1_10_2"></a></span><a class="link" href="history.html#asio.history.asio_1_10_2">Asio
       1.10.2</a>
     </h4>
@@ -3938,7 +4173,7 @@
         </li>
 </ul></div>
 <h4>
-<a name="asio.history.h31"></a>
+<a name="asio.history.h37"></a>
       <span><a name="asio.history.asio_1_10_1"></a></span><a class="link" href="history.html#asio.history.asio_1_10_1">Asio
       1.10.1</a>
     </h4>
@@ -4074,7 +4309,7 @@
         </li>
 </ul></div>
 <h4>
-<a name="asio.history.h32"></a>
+<a name="asio.history.h38"></a>
       <span><a name="asio.history.asio_1_10_0"></a></span><a class="link" href="history.html#asio.history.asio_1_10_0">Asio
       1.10.0</a>
     </h4>
@@ -4240,7 +4475,7 @@
         </li>
 </ul></div>
 <h4>
-<a name="asio.history.h33"></a>
+<a name="asio.history.h39"></a>
       <span><a name="asio.history.asio_1_8_3"></a></span><a class="link" href="history.html#asio.history.asio_1_8_3">Asio
       1.8.3</a>
     </h4>
@@ -4280,7 +4515,7 @@
         </li>
 </ul></div>
 <h4>
-<a name="asio.history.h34"></a>
+<a name="asio.history.h40"></a>
       <span><a name="asio.history.asio_1_8_2"></a></span><a class="link" href="history.html#asio.history.asio_1_8_2">Asio
       1.8.2</a>
     </h4>
@@ -4322,7 +4557,7 @@
         </li>
 </ul></div>
 <h4>
-<a name="asio.history.h35"></a>
+<a name="asio.history.h41"></a>
       <span><a name="asio.history.asio_1_8_1"></a></span><a class="link" href="history.html#asio.history.asio_1_8_1">Asio
       1.8.1</a>
     </h4>
@@ -4359,7 +4594,7 @@
         </li>
 </ul></div>
 <h4>
-<a name="asio.history.h36"></a>
+<a name="asio.history.h42"></a>
       <span><a name="asio.history.asio_1_8_0"></a></span><a class="link" href="history.html#asio.history.asio_1_8_0">Asio
       1.8.0</a>
     </h4>
@@ -4407,7 +4642,7 @@
         </li>
 </ul></div>
 <h4>
-<a name="asio.history.h37"></a>
+<a name="asio.history.h43"></a>
       <span><a name="asio.history.asio_1_6_1"></a></span><a class="link" href="history.html#asio.history.asio_1_6_1">Asio
       1.6.1</a>
     </h4>
@@ -4500,7 +4735,7 @@
         </li>
 </ul></div>
 <h4>
-<a name="asio.history.h38"></a>
+<a name="asio.history.h44"></a>
       <span><a name="asio.history.asio_1_6_0"></a></span><a class="link" href="history.html#asio.history.asio_1_6_0">Asio
       1.6.0</a>
     </h4>
@@ -4544,7 +4779,7 @@
         </li>
 </ul></div>
 <h4>
-<a name="asio.history.h39"></a>
+<a name="asio.history.h45"></a>
       <span><a name="asio.history.asio_1_5_3"></a></span><a class="link" href="history.html#asio.history.asio_1_5_3">Asio
       1.5.3</a>
     </h4>
@@ -4578,7 +4813,7 @@
         </li>
 </ul></div>
 <h4>
-<a name="asio.history.h40"></a>
+<a name="asio.history.h46"></a>
       <span><a name="asio.history.asio_1_5_2"></a></span><a class="link" href="history.html#asio.history.asio_1_5_2">Asio
       1.5.2</a>
     </h4>
@@ -4644,7 +4879,7 @@
         </li>
 </ul></div>
 <h4>
-<a name="asio.history.h41"></a>
+<a name="asio.history.h47"></a>
       <span><a name="asio.history.asio_1_5_1"></a></span><a class="link" href="history.html#asio.history.asio_1_5_1">Asio
       1.5.1</a>
     </h4>
@@ -4689,7 +4924,7 @@
         </li>
 </ul></div>
 <h4>
-<a name="asio.history.h42"></a>
+<a name="asio.history.h48"></a>
       <span><a name="asio.history.asio_1_5_0"></a></span><a class="link" href="history.html#asio.history.asio_1_5_0">Asio
       1.5.0</a>
     </h4>
@@ -4842,7 +5077,7 @@
         </li>
 </ul></div>
 <h4>
-<a name="asio.history.h43"></a>
+<a name="asio.history.h49"></a>
       <span><a name="asio.history.asio_1_4_8"></a></span><a class="link" href="history.html#asio.history.asio_1_4_8">Asio
       1.4.8</a>
     </h4>
@@ -4857,7 +5092,7 @@
         </li>
 </ul></div>
 <h4>
-<a name="asio.history.h44"></a>
+<a name="asio.history.h50"></a>
       <span><a name="asio.history.asio_1_4_7"></a></span><a class="link" href="history.html#asio.history.asio_1_4_7">Asio
       1.4.7</a>
     </h4>
@@ -4936,7 +5171,7 @@
         </li>
 </ul></div>
 <h4>
-<a name="asio.history.h45"></a>
+<a name="asio.history.h51"></a>
       <span><a name="asio.history.asio_1_4_6"></a></span><a class="link" href="history.html#asio.history.asio_1_4_6">Asio
       1.4.6</a>
     </h4>
@@ -5006,7 +5241,7 @@
         </li>
 </ul></div>
 <h4>
-<a name="asio.history.h46"></a>
+<a name="asio.history.h52"></a>
       <span><a name="asio.history.asio_1_4_5"></a></span><a class="link" href="history.html#asio.history.asio_1_4_5">Asio
       1.4.5</a>
     </h4>
@@ -5072,7 +5307,7 @@
         </li>
 </ul></div>
 <h4>
-<a name="asio.history.h47"></a>
+<a name="asio.history.h53"></a>
       <span><a name="asio.history.asio_1_4_4"></a></span><a class="link" href="history.html#asio.history.asio_1_4_4">Asio
       1.4.4</a>
     </h4>
@@ -5135,7 +5370,7 @@
         </li>
 </ul></div>
 <h4>
-<a name="asio.history.h48"></a>
+<a name="asio.history.h54"></a>
       <span><a name="asio.history.asio_1_4_3"></a></span><a class="link" href="history.html#asio.history.asio_1_4_3">Asio
       1.4.3</a>
     </h4>
@@ -5190,7 +5425,7 @@
         </li>
 </ul></div>
 <h4>
-<a name="asio.history.h49"></a>
+<a name="asio.history.h55"></a>
       <span><a name="asio.history.asio_1_4_2"></a></span><a class="link" href="history.html#asio.history.asio_1_4_2">Asio
       1.4.2</a>
     </h4>
@@ -5240,7 +5475,7 @@
         </li>
 </ul></div>
 <h4>
-<a name="asio.history.h50"></a>
+<a name="asio.history.h56"></a>
       <span><a name="asio.history.asio_1_4_1"></a></span><a class="link" href="history.html#asio.history.asio_1_4_1">Asio
       1.4.1</a>
     </h4>
@@ -5267,7 +5502,7 @@
         </li>
 </ul></div>
 <h4>
-<a name="asio.history.h51"></a>
+<a name="asio.history.h57"></a>
       <span><a name="asio.history.asio_1_4_0"></a></span><a class="link" href="history.html#asio.history.asio_1_4_0">Asio
       1.4.0</a>
     </h4>
@@ -5305,7 +5540,7 @@
         </li>
 </ul></div>
 <h4>
-<a name="asio.history.h52"></a>
+<a name="asio.history.h58"></a>
       <span><a name="asio.history.asio_1_2_0"></a></span><a class="link" href="history.html#asio.history.asio_1_2_0">Asio
       1.2.0</a>
     </h4>
@@ -5358,7 +5593,7 @@
         </li>
 </ul></div>
 <h4>
-<a name="asio.history.h53"></a>
+<a name="asio.history.h59"></a>
       <span><a name="asio.history.asio_1_0_0"></a></span><a class="link" href="history.html#asio.history.asio_1_0_0">Asio
       1.0.0</a>
     </h4>
@@ -5366,7 +5601,7 @@
       First stable release of Asio.
     </p>
 </div>
-<div class="copyright-footer">Copyright © 2003-2023 Christopher M. Kohlhoff<p>
+<div class="copyright-footer">Copyright © 2003-2024 Christopher M. Kohlhoff<p>
         Distributed under the Boost Software License, Version 1.0. (See accompanying
         file LICENSE_1_0.txt or copy at <a href="http://www.boost.org/LICENSE_1_0.txt" target="_top">http://www.boost.org/LICENSE_1_0.txt</a>)
       </p>

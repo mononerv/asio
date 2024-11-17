@@ -70,9 +70,10 @@
         Cancellation</a>
       </h5>
 <p>
-        By default, per-operation cancellation is disabled for composed operations
-        that use <a class="link" href="experimental__co_composed.html" title="experimental::co_composed"><code class="computeroutput"><span class="identifier">experimental</span><span class="special">::</span><span class="identifier">co_composed</span></code></a>. It must be explicitly
-        enabled by calling the state's <code class="computeroutput"><span class="identifier">reset_cancellation_state</span></code>
+        By default, terminal per-operation cancellation is enabled for composed operations
+        that use <a class="link" href="experimental__co_composed.html" title="experimental::co_composed"><code class="computeroutput"><span class="identifier">experimental</span><span class="special">::</span><span class="identifier">co_composed</span></code></a>. To disable cancellation
+        for the composed operation, or to alter its supported cancellation types,
+        call the state's <code class="computeroutput"><span class="identifier">reset_cancellation_state</span></code>
         function.
       </p>
 <h5>
@@ -177,7 +178,7 @@
         <span class="emphasis"><em>Convenience header: </em></span>None
       </p>
 </div>
-<div class="copyright-footer">Copyright © 2003-2023 Christopher M. Kohlhoff<p>
+<div class="copyright-footer">Copyright © 2003-2024 Christopher M. Kohlhoff<p>
         Distributed under the Boost Software License, Version 1.0. (See accompanying
         file LICENSE_1_0.txt or copy at <a href="http://www.boost.org/LICENSE_1_0.txt" target="_top">http://www.boost.org/LICENSE_1_0.txt</a>)
       </p>

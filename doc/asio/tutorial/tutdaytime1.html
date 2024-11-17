@@ -28,8 +28,8 @@
 <p>
         We start by including the necessary header files.
       </p>
-<pre class="programlisting"><span class="special">#</span><span class="identifier">include</span> <span class="special">&lt;</span><span class="identifier">iostream</span><span class="special">&gt;</span>
-<span class="special">#</span><span class="identifier">include</span> <span class="special">&lt;</span><span class="identifier">boost</span><span class="special">/</span><span class="identifier">array</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
+<pre class="programlisting"><span class="special">#</span><span class="identifier">include</span> <span class="special">&lt;</span><span class="identifier">array</span><span class="special">&gt;</span>
+<span class="special">#</span><span class="identifier">include</span> <span class="special">&lt;</span><span class="identifier">iostream</span><span class="special">&gt;</span>
 <span class="special">#</span><span class="identifier">include</span> <span class="special">&lt;</span><span class="identifier">asio</span><span class="special">.</span><span class="identifier">hpp</span><span class="special">&gt;</span>
 </pre>
 <p>
@@ -89,16 +89,16 @@
         daytime service.
       </p>
 <p>
-        We use a <code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">array</span></code> to hold the received data. The asio::buffer()
+        We use a <code class="computeroutput"><span class="identifier">std</span><span class="special">::</span><span class="identifier">array</span></code> to hold the received data. The asio::buffer()
         function automatically determines the size of the array to help prevent buffer
-        overruns. Instead of a <code class="computeroutput"><span class="identifier">boost</span><span class="special">::</span><span class="identifier">array</span></code>,
+        overruns. Instead of a <code class="computeroutput"><span class="identifier">std</span><span class="special">::</span><span class="identifier">array</span></code>,
         we could have used a <code class="computeroutput"><span class="keyword">char</span> <span class="special">[]</span></code>
         or <code class="computeroutput"><span class="identifier">std</span><span class="special">::</span><span class="identifier">vector</span></code>.
       </p>
 <pre class="programlisting">    <span class="keyword">for</span> <span class="special">(;;)</span>
     <span class="special">{</span>
-      <span class="identifier">boost</span><span class="special">::</span><span class="identifier">array</span><span class="special">&lt;</span><span class="keyword">char</span><span class="special">,</span> <span class="number">128</span><span class="special">&gt;</span> <span class="identifier">buf</span><span class="special">;</span>
-      <span class="identifier">asio</span><span class="special">::</span><span class="identifier">error_code</span> <span class="identifier">error</span><span class="special">;</span>
+      <span class="identifier">std</span><span class="special">::</span><span class="identifier">array</span><span class="special">&lt;</span><span class="keyword">char</span><span class="special">,</span> <span class="number">128</span><span class="special">&gt;</span> <span class="identifier">buf</span><span class="special">;</span>
+      <span class="identifier">std</span><span class="special">::</span><span class="identifier">error_code</span> <span class="identifier">error</span><span class="special">;</span>
 
       <span class="identifier">size_t</span> <span class="identifier">len</span> <span class="special">=</span> <span class="identifier">socket</span><span class="special">.</span><span class="identifier">read_some</span><span class="special">(</span><span class="identifier">asio</span><span class="special">::</span><span class="identifier">buffer</span><span class="special">(</span><span class="identifier">buf</span><span class="special">),</span> <span class="identifier">error</span><span class="special">);</span>
 </pre>
@@ -110,7 +110,7 @@
 <pre class="programlisting">      <span class="keyword">if</span> <span class="special">(</span><span class="identifier">error</span> <span class="special">==</span> <span class="identifier">asio</span><span class="special">::</span><span class="identifier">error</span><span class="special">::</span><span class="identifier">eof</span><span class="special">)</span>
         <span class="keyword">break</span><span class="special">;</span> <span class="comment">// Connection closed cleanly by peer.</span>
       <span class="keyword">else</span> <span class="keyword">if</span> <span class="special">(</span><span class="identifier">error</span><span class="special">)</span>
-        <span class="keyword">throw</span> <span class="identifier">asio</span><span class="special">::</span><span class="identifier">system_error</span><span class="special">(</span><span class="identifier">error</span><span class="special">);</span> <span class="comment">// Some other error.</span>
+        <span class="keyword">throw</span> <span class="identifier">std</span><span class="special">::</span><span class="identifier">system_error</span><span class="special">(</span><span class="identifier">error</span><span class="special">);</span> <span class="comment">// Some other error.</span>
 
       <span class="identifier">std</span><span class="special">::</span><span class="identifier">cout</span><span class="special">.</span><span class="identifier">write</span><span class="special">(</span><span class="identifier">buf</span><span class="special">.</span><span class="identifier">data</span><span class="special">(),</span> <span class="identifier">len</span><span class="special">);</span>
     <span class="special">}</span>
@@ -135,7 +135,7 @@
         TCP daytime server</a>
       </p>
 </div>
-<div class="copyright-footer">Copyright © 2003-2023 Christopher M. Kohlhoff<p>
+<div class="copyright-footer">Copyright © 2003-2024 Christopher M. Kohlhoff<p>
         Distributed under the Boost Software License, Version 1.0. (See accompanying
         file LICENSE_1_0.txt or copy at <a href="http://www.boost.org/LICENSE_1_0.txt" target="_top">http://www.boost.org/LICENSE_1_0.txt</a>)
       </p>
